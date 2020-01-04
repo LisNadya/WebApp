@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>Edit Profile</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/editProfile.css" />
+
+        <!--Icons-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!--Sidebar-->
+            <div id="leftBar">
+                <div id="user">
+                    <img src="img/default.jpg" alt="Profile Picture" />
+                    <p>
+                        Hi <br />
+                        <b>Kuang Tar</b>
+                    </p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">User Profile</a></li>
+                        <li><a href="#">Rental History</a></li>
+                        <li><a href="#">Payment History</a></li>
+                    </ul>
+                </nav>
+                <div id="signOut">
+                    <a href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                </div>
+            </div>
+
+            <!--Begin page content-->
+            <div id="body">
+                <div id="profile">
+                    <h1>User Profile</h1>
+                    <form>
+                        <fieldset>
+                            <legend>Payment Details</legend>
+                            <label>First Name:</label><br />
+                            <input
+                                size="50"
+                                type="text"
+                                name="name"
+                                placeholder="Enter your first name here"
+                            /><br /><br />
+
+                            <label>Last Name:</label><br />
+                            <input
+                                size="50"
+                                type="text"
+                                name="name"
+                                placeholder="Enter your last name here"
+                            /><br /><br />
+
+                            <label>Email:</label><br />
+                            <input
+                                size="50"
+                                type="email"
+                                name="name"
+                                placeholder="Enter your email here"
+                            /><br /><br />
+
+                            <label>Phone Number:</label><br />
+                            <input
+                                size="50"
+                                type="tel"
+                                name="phone"
+                                placeholder="Enter your phone number here"
+                            /><br /><br />
+
+                            <label>NRIC/Passport:</label><br />
+                            <input
+                                size="50"
+                                type="text"
+                                name="phone"
+                                placeholder="Enter your NRIC/Passport number here"
+                            /><br /><br />
+
+                            <label>Licence Number:</label><br />
+                            <input
+                                size="50"
+                                type="text"
+                                name="phone"
+                                placeholder="Enter your licence number here"
+                            /><br /><br />
+
+                            <label>Licence Card:</label><br />
+                            <button
+                                type="submit"
+                                onclick="window.location.href = './editProfile.html';"
+                            >
+                                Upload</button
+                            ><br /><br />
+
+                            <label>NRIC/Passport Card:</label><br />
+                            <button
+                                type="submit"
+                                onclick="window.location.href = './editProfile.html';"
+                            >
+                                Upload</button
+                            ><br /><br />
+                        </fieldset>
+                    </form>
+                    <br />
+                    <div class="footButton">
+                        <button
+                            type="submit"
+                            onclick="window.location.href = './userProfile.html';"
+                        >
+                            Save
+                        </button>
+                        <button
+                            type="reset"
+                            onclick="window.location.href = './editProfile.html';"
+                        >
+                            Clear Form
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

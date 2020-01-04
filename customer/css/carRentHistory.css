@@ -1,0 +1,139 @@
+h1,
+h2,
+h3,
+p,
+body,
+div {
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+td,
+th,
+tr {
+    border: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 0.25em 0 0.25em 0;
+}
+h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0 0.25em 0;
+}
+p,
+body {
+    font-size: 0.9em;
+}
+p {
+    margin-bottom: 1em;
+}
+body {
+    background-color: #e2c044;
+}
+
+button {
+    display: inline;
+    background: white;
+    color: black;
+    border: none;
+    border: 1px solid black;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background: #aaa;
+}
+
+/*Left bar settings*/
+#leftBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin-right: 12em;
+    background: white;
+}
+#user {
+    float: left;
+    margin-bottom: 2em;
+    background: #d3d0cb;
+    padding: 3em;
+}
+#user img {
+    float: left;
+    width: 70px;
+    margin-right: 1em;
+    height: 70px;
+    border-radius: 100px;
+    box-shadow: 0 0 4px rgb(155, 155, 155);
+}
+
+#user p {
+    float: right;
+    font-size: 12pt;
+}
+#leftBar nav {
+    padding: 1em 3em;
+}
+
+#leftBar nav li {
+    display: block;
+    padding: 0.5em;
+    border-bottom: 1px solid rgb(71, 71, 71);
+    transition-duration: 0.5s;
+}
+
+#leftBar nav li:hover {
+    border-bottom: 5px solid #e2c044;
+}
+
+#signOut {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#leftBar nav li a,
+#signOut a {
+    color: rgb(71, 71, 71);
+    transition-duration: 0.5s;
+}
+
+#leftBar nav li a:hover,
+#signOut a:hover {
+    color: #aa8f2e;
+}
+
+#body {
+    margin: 2em 2em 2em 20em;
+    width: 75%;
+}
+
+#history {
+    position: relative;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 4px rgb(54, 54, 54);
+    padding: 1em;
+}
+
+#enter {
+    display: inline-block;
+}

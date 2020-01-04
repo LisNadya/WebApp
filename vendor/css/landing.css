@@ -1,0 +1,159 @@
+h1, h2, h3, p, body, div {
+   font-family: Tahoma, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;  
+}
+
+a{
+   text-decoration:none;
+}
+
+h1  {  
+   font-size: 1.8em; 
+   margin: 0.25em 0 0.25em 0;
+}
+h2  {   
+   font-size: 1.2em;    
+   margin: 0.5em 0 0.25em 0;
+}
+p, body {
+   font-size: 0.9em;
+} 
+p {
+   margin-bottom: 1em;
+}  
+body {
+   background-color: #e2c044; 
+}
+
+
+/*BOBBY"S added code*/
+
+/*title*/
+#pageTitle{
+   padding-left: 10em;
+   padding-top: 10em;
+   color: white;
+   width: fit-content;
+}
+
+#pageTitle h1{
+   font-size: 70pt;
+   line-height: 1em;
+   font-weight: bold;
+}
+
+#pageTitle h2{
+   font-size: 30pt;
+   line-height: 1em;
+   font-weight: lighter;
+}
+
+
+/*Search box*/
+#rightSide{
+   position: absolute;
+   top:7em;
+   right: 3em;
+   width: 25%;
+   height:fit-content;
+}
+
+#loginForm h1{
+   font-size: 20pt;
+   margin-bottom: 1.25em;
+}
+
+#loginForm{
+   margin:25%, 25%;
+   padding:2em;
+   background:white;
+   border:none;
+   border-radius:2em;
+   height: fit-content;
+   box-shadow:1px 1px 5px rgb(77, 77, 77);
+}
+
+input{
+   display:block;
+   margin-bottom:1em;
+   margin-top: 1em;
+   width:90%;
+   padding:5%;
+   border:1px solid rgb(163, 163, 163);
+   border-radius:1em;
+}
+
+*
+input[type="date"]:before {
+   content: attr(placeholder) !important;
+   color: #aaa;
+   margin-right: 0.5em;
+ }
+ input[type="date"]:focus:before,
+ input[type="date"]:valid:before {
+   content: "";
+ }
+
+#loginForm a{
+   background:transparent;
+   color:black;
+   border:none;
+   float:right;
+   cursor:pointer;
+   font-size:18pt;
+   transition-duration: 0.5s;
+   margin-top: 0.5em;
+   margin-bottom: 1em;
+}
+
+.raquo{
+   border:2px solid black;
+   padding:0 10px 5px 10px;
+   font-size:20pt;
+   border-radius:100px;
+   transition-duration: 0.5s;
+}
+
+#loginForm a:hover{
+   color:#8a721c;
+}
+
+#loginForm a:hover .raquo{
+   border-color:#8a721c;
+   color:#8a721c;
+}
+
+#detailsBody{
+   position: relative;
+   display: grid;
+   top: 8rem;
+   margin-bottom: 15em;
+   height: 800px;
+   background: white;
+   grid-template-columns: auto auto auto;
+   padding: 10px;
+}
+
+#detailsBody p{
+   font-size: 15pt;
+   font-weight: lighter;
+   margin: 1em;
+   padding: 1em;
+}
+
+.salesBox{
+   margin: 2em;
+   float: left;
+   height: 700px;
+   position: relative;
+   padding: 20px;
+   text-align: center;
+}
+
+
+#detailsBody h2{
+   font-size: 20pt;
+   margin: 1em;
+   padding: 2em;
+}

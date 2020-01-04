@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <!--    Custom styles   -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/cartype.css" />
+    <!--   Icons   -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="leftBar">
+      <div id="user">
+        <img src="img/default.jpg" alt="" />
+        <p>
+          Hi <br />
+          <b>Kuang Tar</b>
+        </p>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="cartype.html">Manage Types of Vehicles</a></li>
+            <li><a href="user.html">Manage Users</a></li>
+            <li><a href="servicePrice.html">Manage Service Price</a></li>
+            <li><a href="promotion.html">Manage Promotions</a></li>
+        </ul>
+    </nav>
+    <div id="signOut">
+        <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
+    </div>
+    </div>
+    <div id="body">
+      <div id="box">
+        <h1>Car List</h1>
+        <p></p>
+        <div class="navbar">
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Type</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Brand</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Year</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <div>
+            <button class="dropbtn">Filter</button>
+          </div>
+        </div>
+        <br />
+        <br />
+        <!-- Table -->
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Year</th>
+              <th scope="col">Year</th>
+              <th scope="col">Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>will</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Be</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>filled</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>later</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <!-- <tfoot>
+            <tr>
+              <td colspan="3">Kalau Nak</td>
+              <td>$135.36</td>
+            </tr>
+          </tfoot> -->
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

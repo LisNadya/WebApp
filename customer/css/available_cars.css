@@ -1,0 +1,231 @@
+h1, h2, h3, p, body, div {
+   font-family: Tahoma, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;  
+}
+
+a{
+   text-decoration:none;
+}
+
+h1  {  
+   font-size: 1.8em; 
+   margin: 0.25em 0 0.25em 0;
+}
+h2  {   
+   font-size: 1.2em;    
+   margin: 0.5em 0 0.25em 0;
+}
+p, body {
+   font-size: 0.9em;
+} 
+p {
+   margin-bottom: 1em;
+}  
+body {
+   background-color: #e2c044; 
+}
+
+/*Left bar settings*/
+#leftBar{
+   position:fixed;
+   top:0;
+   left:0;
+   height:100%;
+   margin-right:12em;
+   background:white;
+}
+#user{
+   float:left;
+   margin-bottom:2em;
+   background:#d3d0cb;
+   padding:3em;
+}
+#user img{
+   float:left;
+   width:70px;
+   margin-right:1em;
+   height:70px;
+   border-radius:100px;
+   box-shadow:0 0 4px rgb(155, 155, 155);
+}
+
+#user p{
+   float:right;
+   font-size:12pt;
+}
+#leftBar nav{
+   padding:1em 3em;
+}
+
+#leftBar nav li{
+   display:block;
+   padding: 0.5em;
+   border-bottom:1px solid rgb(71, 71, 71);
+   transition-duration:0.5s;
+}
+
+#leftBar nav li:hover{
+   border-bottom:5px solid #e2c044;
+}
+
+#signOut{
+   position:absolute;
+   bottom:0;
+   left:0;
+   width:100%;
+   text-align:center;
+   padding: 1em 0;
+}
+
+#leftBar nav li a, #signOut a{
+   color:rgb(71, 71, 71);
+   transition-duration:0.5s;
+}
+
+#leftBar nav li a:hover, #signOut a:hover{
+   color:#aa8f2e;
+}
+
+
+/*Main body settings*/
+#body{
+   margin:2em 2em 2em 20em;
+}
+
+/* Promotion header settings */
+#promotion{
+   position:relative;
+   margin-bottom:2em;
+   background:white;
+   border-radius:0.5em;
+   box-shadow:2px 2px 4px rgb(54, 54, 54);
+   padding:1em 5%;
+}
+
+#promotion img{
+   width:100%;
+}
+
+#pagLeft, #pagRight{
+   position:absolute;
+   color:rgb(46, 46, 46);
+   font-size:40pt;
+   margin-top:10%;
+   transition-duration: 0.5s;
+}
+
+#pagLeft{
+   left:1%;
+}
+
+#pagRight{
+   right:1%;
+}
+
+#pagLeft:hover, #pagRight:hover{
+   color:#e2c044;
+}
+
+/* Items settings */
+.sales{
+   float:left;
+   width:100%;
+   margin-bottom:2em;
+}
+.sales figure{
+   float:left;
+   background:white;
+   width:60%;
+   border-radius:0.5em;
+   box-shadow:2px 2px 4px rgb(54, 54, 54);
+   padding:1em;
+}
+
+.sales figure img{
+   float:left;
+   border-radius:0.5em;
+   width:70%;
+   border:5px solid #d3d0cb;
+}
+
+.sales figure figcaption{
+   float:right;
+   width:27%;
+}
+
+.sales figure figcaption h2{
+   text-align:center;
+}
+
+
+.sales figure figcaption ul{
+   padding-left:4em;
+}
+
+.sales p{
+   float:right;
+   margin-top:10%;
+   width:30%;
+   font-size:18pt;
+   text-transform:uppercase;
+}
+
+.sales p a{
+   display:block;
+   background:white;
+   color:black;
+   border:none;
+   text-align:center;
+   font-size:0.8em;
+   padding:1em 3em;
+   border-radius:2em;
+   margin-top:1em;
+   cursor:pointer;
+   transition-duration:0.5s;
+}
+
+.sales p a:hover{
+   color:white;
+   background:rgb(22, 22, 22);
+}
+
+
+@media screen and (max-width: 900px) {
+   .sales figure{
+      width:92%;
+   }
+
+   .sales figure img{
+      width:95%;
+   }
+
+   .sales figure figcaption{
+      float:left;
+      font-size:80%;
+      width:100%;
+   }
+
+   .sales p a{
+      margin:auto;
+      margin-top:1em;
+      font-size:8pt;
+      padding:1em 2em;
+   }
+
+   .sales p{
+      float:left;
+      margin-left:10px;
+      width:100%;
+      font-size:8pt;
+      text-align:center;
+   }
+
+   #promotion h1{
+      font-size:95%;
+   }
+
+   #pagLeft, #pagRight{
+      font-size:15pt;
+   }
+ }
