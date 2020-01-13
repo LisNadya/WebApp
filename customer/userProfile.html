@@ -17,101 +17,97 @@
     </head>
 
     <body>
-        <div class="wrapper">
-            <!--Sidebar-->
-            <div id="leftBar">
-                <div id="user">
-                    <img src="img/default.jpg" alt="Profile Picture" />
-                    <p>
-                        Hi <br />
-                        <b>Kuang Tar</b>
-                    </p>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="available_cars.html">View List of Cars</a></li>
-                        <li><a href="userProfile.html">User Profile</a></li>
-                        <li><a href="carRentHistory.html">Rental History</a></li>
-                    </ul>
-                </nav>
-                <div id="signOut">
-                    <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
-                </div>
+        <!--Sidebar-->
+        <section id="leftBar">
+            <div id="user">
+                <img src="img/default.jpg" alt="Profile Picture" />
+                <p>
+                    Hi <br />
+                    <b>Kuang Tar</b>
+                </p>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="available_cars.html">View List of Cars</a></li>
+                    <li><a href="userProfile.html">User Profile</a></li>
+                    <li><a href="carRentHistory.html">Rental History</a></li>
+                </ul>
+            </nav>
+            <div id="signOut">
+                <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
+            </div>
+        </section>
 
-            <!--Begin page content-->
-            <div id="body">
-                <div id="profile">
-                    <h1>User Profile</h1>
-                    <fieldset>
-                        <legend>User Details</legend>
-                        <table>
-                            <tr>
-                                <td class="leftSide">
-                                    First Name:&nbsp;
-                                </td>
-                                <td>Name Name</td>
-                                <td rowspan="3">
-                                    NRIC/Passport
-                                    <div class="col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body"></div>
-                                        </div>
+        <!--Begin page content-->
+        <main id="body">
+            <div id="profile">
+                <h1>User Profile</h1>
+                <fieldset>
+                    <legend>User Details</legend>
+                    <table>
+                        <tr>
+                            <td class="leftSide">
+                                First Name:&nbsp;
+                            </td>
+                            <td>Name Name</td>
+                            <td rowspan="3">
+                                NRIC/Passport
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body"></div>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="leftSide">
-                                    Last Name:&nbsp;
-                                </td>
-                                <td>Name Name</td>
-                            </tr>
-                            <tr>
-                                <td class="leftSide">
-                                    Email:&nbsp;
-                                </td>
-                                <td>
-                                    <u>______________________________</u>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="leftSide">
-                                    Phone Number:&nbsp;
-                                </td>
-                                <td>
-                                    <u>______________________________</u>
-                                </td>
-                                <td rowspan="3">
-                                    Licence
-                                    <div class="col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body"></div>
-                                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftSide">
+                                Last Name:&nbsp;
+                            </td>
+                            <td>Name Name</td>
+                        </tr>
+                        <tr>
+                            <td class="leftSide">
+                                Email:&nbsp;
+                            </td>
+                            <td>
+                                <u>______________________________</u>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftSide">
+                                Phone Number:&nbsp;
+                            </td>
+                            <td>
+                                <u>______________________________</u>
+                            </td>
+                            <td rowspan="3">
+                                Licence
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body"></div>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="leftSide">
-                                    NRIC/Passport:&nbsp;
-                                </td>
-                                <td>Name Name</td>
-                            </tr>
-                            <tr>
-                                <td class="leftSide">
-                                    Licence Number:&nbsp;
-                                </td>
-                                <td>Name Name</td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                    <br />
-                    <button
-                        onclick="window.location.href = './editProfile.html';"
-                    >
-                        Edit Profile
-                    </button>
-                </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftSide">
+                                NRIC/Passport:&nbsp;
+                            </td>
+                            <td>Name Name</td>
+                        </tr>
+                        <tr>
+                            <td class="leftSide">
+                                Licence Number:&nbsp;
+                            </td>
+                            <td>Name Name</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br />
+                <button onclick="window.location.href = './editProfile.html';">
+                    Edit Profile
+                </button>
             </div>
-        </div>
+        </main>
     </body>
 </html>
