@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+
 h1, h2, h3, p, body, div {
    font-family: Tahoma, Helvetica, sans-serif;
    margin: 0;
-   padding: 0;  
+   padding: 0;
 }
 
 a{
@@ -26,134 +28,125 @@ body {
    background-color: #e2c044; 
 }
 
+/* Navbar */
 
-/*BOBBY"S added code*/
-
-/*title*/
-#pageTitle{
-   padding-left: 10em;
-   padding-top: 10em;
-   color: white;
-   width: fit-content;
+#brand-header {
+    font-size: 22pt;
+    font-family: monospace;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-left: 0.1em;
+    color: black;
+    
 }
 
-#pageTitle h1{
-   font-size: 70pt;
-   line-height: 1em;
-   font-weight: bold;
-}
-
-#pageTitle h2{
-   font-size: 30pt;
-   line-height: 1em;
-   font-weight: lighter;
-}
-
-
-/*Search box*/
-#rightSide{
-   position: absolute;
-   top:7em;
-   right: 3em;
-   width: 25%;
-   height:fit-content;
-}
-
-#loginForm h1{
-   font-size: 20pt;
-   margin-bottom: 1.25em;
-}
-
-#loginForm{
-   margin:25%, 25%;
-   padding:2em;
-   background:white;
-   border:none;
-   border-radius:2em;
-   height: fit-content;
-   box-shadow:1px 1px 5px rgb(77, 77, 77);
-}
-
-input{
-   display:block;
-   margin-bottom:1em;
-   margin-top: 1em;
-   width:90%;
-   padding:5%;
-   border:1px solid rgb(163, 163, 163);
-   border-radius:1em;
-}
-
-*
-input[type="date"]:before {
-   content: attr(placeholder) !important;
-   color: #aaa;
-   margin-right: 0.5em;
- }
- input[type="date"]:focus:before,
- input[type="date"]:valid:before {
-   content: "";
- }
-
-#loginForm a{
-   background:transparent;
-   color:black;
-   border:none;
-   float:right;
-   cursor:pointer;
-   font-size:18pt;
-   transition-duration: 0.5s;
-   margin-top: 0.5em;
-   margin-bottom: 1em;
-}
-
-.raquo{
-   border:2px solid black;
-   padding:0 10px 5px 10px;
-   font-size:20pt;
-   border-radius:100px;
-   transition-duration: 0.5s;
-}
-
-#loginForm a:hover{
-   color:#8a721c;
-}
-
-#loginForm a:hover .raquo{
-   border-color:#8a721c;
-   color:#8a721c;
-}
-
-#detailsBody{
-   position: relative;
-   display: grid;
-   top: 8rem;
-   margin-bottom: 15em;
-   height: 800px;
-   background: white;
-   grid-template-columns: auto auto auto;
-   padding: 10px;
-}
-
-#detailsBody p{
-   font-size: 15pt;
-   font-weight: lighter;
-   margin: 1em;
-   padding: 1em;
-}
-
-.salesBox{
-   margin: 2em;
+.leftAlign {
    float: left;
-   height: 700px;
-   position: relative;
-   padding: 20px;
-   text-align: center;
+   margin: .5em;
 }
 
+.rightAlign {
+   float: right;
+   margin: .5em;
+}
 
-#detailsBody h2{
-   font-size: 20pt;
-   margin: 1em;
-   padding: 2em;
+.navbar {
+    width: 100%;
+    overflow:hidden;
+    padding: 1em;
+    background-color: rgba(242, 213, 107, 1);
+}
+
+#navbar-item {
+    padding: 1em;
+    margin-right: 1em;
+    width: 100%;
+    text-align: center;
+    font-size: 14pt;
+    color: black;
+}
+
+#navbar-item:hover {
+    color: beige;
+    transition-delay: 0.1s;
+}
+
+#mainTitle {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 34pt;
+    color: white;
+}
+
+#searchCar {
+    display: flex;
+    width: 80%;
+    background-color: white;
+    padding: 1em;
+    margin: auto;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 0.5em 2em;
+    margin-right: 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 16pt;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+}
+
+.button1:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: white;
+}
+
+#underline:hover {
+    text-decoration: underline;
+    color: beige;
+    transition-delay: 0.1s;
+}
+
+.content {
+    padding: 2em;
+    width: 100%;
+    background-color: white;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    padding: 2em;
+    margin-bottom: 5em;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
