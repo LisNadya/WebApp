@@ -3,10 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <title>Payment</title>
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/default.css" />
+        <link rel="stylesheet" href="css/sidebar.css" />
         <link rel="stylesheet" href="css/payment.css" />
 
         <!--Icons-->
@@ -27,16 +31,18 @@
                 </p>
             </div>
             <nav>
-                <ul>
-                    <li><a href="available_cars.html">View List of Cars</a></li>
-                    <li><a href="userProfile.html">User Profile</a></li>
-                    <li><a href="carRentHistory.html">Rental History</a></li>
-                </ul>
+                <a href="available_cars.html" id="selected">View List of Cars</a>
+                <a href="userProfile.html">User Profile</a>
+                <a href="carRentHistory.html">Rental History</a>
             </nav>
             <div id="signOut">
                 <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
             </div>
         </div>
+
+        <hgroup>
+            <h1>Payment</h1>
+        </hgroup>
 
         <!--Page Content-->
         <div id="body">

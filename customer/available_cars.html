@@ -2,12 +2,17 @@
 <html lang="en">
 <head lang="en">
    <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1" name="viewport" />
+   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
    <title>List of Available Cars</title>
    <!--    Custom styles   -->
    <link rel="stylesheet" href="css/reset.css" />
-   <link rel="stylesheet" href="css/available_cars.css" />
+   <link rel="stylesheet" href="css/default.css" />
+   <link rel="stylesheet" href="css/sidebar.css" />
+   <link rel="stylesheet" href="css/availableCars.css" />
    <!--    Icons   -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
 </head>
 <body>
     <aside id="leftBar">
@@ -19,19 +24,21 @@
             </p>
         </div>
         <nav>
-            <ul>
-                <li><a href="available_cars.html">View List of Cars</a></li>
-                <li><a href="userProfile.html">User Profile</a></li>
-                <li><a href="carRentHistory.html">Rental History</a></li>
-            </ul>
+            <a href="available_cars.html" id="selected">View List of Cars</a>
+            <a href="userProfile.html">User Profile</a>
+            <a href="carRentHistory.html">Rental History</a>
         </nav>
         <div id="signOut">
             <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
         </div>
     </aside>
+
+    <hgroup>
+        <h1>List of Available Cars</h1>
+    </hgroup>
+    
     <main id="body">
         <section id="promotion">
-            <h1>Promotions</h1>
             <img src="img/promo1.jpg" alt="Promotion">
             <a href="#" id="pagLeft">&laquo;</a>
             <a href="#" id="pagRight">&raquo;</a>
@@ -51,8 +58,8 @@
                     </figcaption>
                 </figure>
                 <p>
-                    from <br/>
-                    &emsp;<b>RM80/day</b>
+                    from<br/>
+                    <b>RM80/day</b>
                     <a href="bookdetails.html">Book Now</a>
                 </p>
             </div>
@@ -70,7 +77,7 @@
                     </figcaption>
                 </figure>
                 <p>
-                    from <br/>&emsp;
+                    from<br/>
                     <b>RM70/day</b>
                     <a href="bookdetails.html">Book Now</a>
                 </p>
@@ -89,7 +96,7 @@
                     </figcaption>
                 </figure>
                 <p>
-                    from <br/>&emsp;
+                    from<br/>
                     <b>RM90/day</b>
                     <a href="bookdetails.html">Book Now</a>
                 </p>
@@ -108,8 +115,8 @@
                     </figcaption>
                 </figure>
                 <p>
-                    from <br/>&emsp;
-                    <b>RM60/day</b>
+                    from<br/>
+                    <b>RM80/day</b>
                     <a href="bookdetails.html">Book Now</a>
                 </p>
             </div>

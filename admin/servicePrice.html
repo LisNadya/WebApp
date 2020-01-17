@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>Dashboard</title>
+   <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Manage Service Price</title>
    <!--    Custom styles   -->
    <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
    <link rel="stylesheet" href="css/dashboard.css" />
    <link rel="stylesheet" href="css/servicePrice.css" />
    <!--    Icons   -->
@@ -20,17 +24,20 @@
             </p>
         </div>
         <nav>
-            <ul>
-                <li><a href="cartype.html">Manage Types of Vehicles</a></li>
-                <li><a href="user.html">Manage Users</a></li>
-                <li><a href="servicePrice.html">Manage Service Price</a></li>
-                <li><a href="promotion.html">Manage Promotions</a></li>
-            </ul>
-        </nav>
+            <a href="cartype.html" >Manage Types of Vehicles</a>
+            <a href="user.html" >Manage Users</a>
+            <a href="servicePrice.html" id="selected">Manage Service Price</a>
+            <a href="promotion.html">Manage Promotions</a>
+          </nav>
         <div id="signOut">
             <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
         </div>
     </div>
+    
+    <hgroup>
+        <h1>Manage Service Price</h1>
+    </hgroup>
+
     <div id="body">
         <div id="title">
             <h1>Service Price</h1>

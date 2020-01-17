@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <title>User Profile</title>
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/default.css" />
+        <link rel="stylesheet" href="css/sidebar.css" />
         <link rel="stylesheet" href="css/userProfile.css" />
 
         <!--Icons-->
@@ -15,7 +17,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
     </head>
-
+    <hgroup>
+        <h1>List of Available Cars</h1>
+    </hgroup>
     <body>
         <div class="wrapper">
             <!--Sidebar-->
@@ -28,16 +32,18 @@
                     </p>
                 </div>
                 <nav>
-                    <ul>
-                        <li><a href="available_cars.html">View List of Cars</a></li>
-                        <li><a href="userProfile.html">User Profile</a></li>
-                        <li><a href="carRentHistory.html">Rental History</a></li>
-                    </ul>
+                    <a href="available_cars.html">View List of Cars</a>
+                    <a href="userProfile.html" id="selected">User Profile</a>
+                    <a href="carRentHistory.html">Rental History</a>
                 </nav>
                 <div id="signOut">
                     <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
                 </div>
             </div>
+
+            <hgroup>
+                <h1>User Profile</h1>
+            </hgroup>
 
             <!--Begin page content-->
             <div id="body">
