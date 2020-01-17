@@ -20,9 +20,8 @@
     </head>
 
     <body>
-        <div class="wrapper">
             <!--Sidebar-->
-            <div id="leftBar">
+            <aside id="leftBar">
                 <div id="user">
                     <img src="img/default.jpg" alt="Profile Picture" />
                     <p>
@@ -38,37 +37,37 @@
                 <div id="signOut">
                     <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
                 </div>
-            </div>
+            </aside>
             <hgroup>
                 <h1>Payment</h1>
             </hgroup>
             <!--Page Content-->
-            <div id="body">
+            <section id="body">
                 <!--Begin page content-->
                 <div id="paymentC">
                     <h1>Thank you for your purchase</h1>
                     <h2>Your payment has been successful</h2>
+                </header>
+                <br />
+                <fieldset>
+                    <legend>Payment Details</legend>
+                    <label>Full Name: Name Name</label>
                     <br />
-                    <fieldset>
-                        <legend>Payment Details</legend>
-                        <label>Full Name: Name Name</label>
-                        <br />
-                        <br />
-                        <label>Contact Number: 012-3456789</label>
-                        <br />
-                        <br />
+                    <br />
+                    <label>Contact Number: 012-3456789</label>
+                    <br />
+                    <br />
 
-                        <label>Adress of Delivery:<br />Name Name</label><br />
-                    </fieldset>
-                    <br />
-                    <button
-                        type="submit"
-                        onclick="window.location.href = './available_cars.html';"
-                    >
-                        Proceed
-                    </button>
-                </div>
+                    <label>Adress of Delivery:<br />Name Name</label><br />
+                </fieldset>
+                <br />
+                <button
+                    type="submit"
+                    onclick="window.location.href = './available_cars.html';"
+                >
+                    Proceed
+                </button>
             </div>
-        </div>
+        </section>
     </body>
 </html>

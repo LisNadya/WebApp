@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <div class="wrapper">
+        <aside class="wrapper">
             <!--Sidebar-->
             <div id="leftBar">
                 <div id="user">
@@ -40,31 +40,37 @@
                     <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
                 </div>
             </div>
+        </aside>
 
             <hgroup>
                 <h1>Car Rent History</h1>
             </hgroup>
 
             <!--Page Content-->
-            <div id="body">
+            <section id="body">
                 <!--Begin page content-->
                 <div id="history">
                     <div id="enter">
+                    <header>
                         <h1>Car Rent History</h1>
-                        <br />
-                        <form method="GET">
-                            <label>From:</label>
-                            <input type="date" />
-                            <label>To:</label>
-                            <input type="date" />
-                            <button type="submit">Enter</button>
-                        </form>
-                    </div>
+                    </header>
                     <br />
-                    <br />
-                    <fieldset>
-                        <legend>Car Rent Details</legend>
-                        <table>
+                    <form method="GET">
+                        <label>From:</label>
+                        <input type="date" />
+                        <label>To:</label>
+                        <input type="date" />
+                        <button type="submit" name="submit" value="submit">
+                            Enter
+                        </button>
+                    </form>
+                </div>
+                <br />
+                <br />
+                <fieldset>
+                    <legend>Car Rent Details</legend>
+                    <table>
+                        <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Car Model</th>
@@ -81,6 +87,8 @@
                                 <td>&nbsp;2019-12-02</td>
                                 <td>&nbsp;2019-12-06</td>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>&nbsp;2</td>
                                 <td>&nbsp;Honda CRV</td>
@@ -89,11 +97,11 @@
                                 <td>&nbsp;2019-12-19</td>
                                 <td>&nbsp;2019-12-22</td>
                             </tr>
-                        </table>
-                    </fieldset>
-                    <br />
-                </div>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <br />
             </div>
-        </div>
+        </section>
     </body>
 </html>

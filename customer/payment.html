@@ -22,7 +22,7 @@
 
     <body>
         <!--Sidebar-->
-        <div id="leftBar">
+        <aside id="leftBar">
             <div id="user">
                 <img src="img/default.jpg" alt="Profile Picture" />
                 <p>
@@ -38,18 +38,20 @@
             <div id="signOut">
                 <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
             </div>
-        </div>
+        </aside>
 
         <hgroup>
             <h1>Payment</h1>
         </hgroup>
 
         <!--Page Content-->
-        <div id="body">
+        <section id="body">
             <!--Begin page content-->
             <div id="payment">
-                <h1>Thank you for your purchase</h1>
-                <h2>Please proceed with the payment</h2>
+                <header>
+                    <h1>Thank you for your purchase</h1>
+                    <h2>Please proceed with the payment</h2>
+                </header>
                 <br />
                 <form>
                     <fieldset>
@@ -87,21 +89,15 @@
                             <option>Credit/Debit card</option>
                         </select>
                     </fieldset>
+                    <br />
+                    <button type="submit" value="submit" name="submit">
+                        <a href="./paymentComplete.html">Proceed</a>
+                    </button>
+                    <button type="reset" name="reset">
+                        <a href="./payment.html">Clear Form</a>
+                    </button>
                 </form>
-                <br />
-                <button
-                    type="submit"
-                    onclick="window.location.href = './paymentComplete.html';"
-                >
-                    Proceed
-                </button>
-                <button
-                    type="reset"
-                    onclick="window.location.href = './payment.html';"
-                >
-                    Clear Form
-                </button>
             </div>
-        </div>
+        </section>
     </body>
 </html>

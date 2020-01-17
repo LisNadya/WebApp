@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <div class="wrapper">
+        <aside class="wrapper">
             <!--Sidebar-->
             <div id="leftBar">
                 <div id="user">
@@ -38,99 +38,86 @@
                 <div id="signOut">
                     <a href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
                 </div>
-            </div>
+            </aside>
             <hgroup>
                 <h1>Edit Profile</h1>
             </hgroup>
             <!--Begin page content-->
-            <div id="body">
+            <section id="body">
                 <div id="profile">
+                <header>
                     <h1>User Profile</h1>
-                    <form>
-                        <fieldset>
-                            <legend>Payment Details</legend>
-                            <label>First Name:</label><br />
-                            <input
-                                size="50"
-                                type="text"
-                                name="name"
-                                placeholder="Enter your first name here"
-                            /><br /><br />
+                </header>
+                <form>
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <label>First Name:</label><br />
+                        <input
+                            size="50"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your first name here"
+                        /><br /><br />
 
-                            <label>Last Name:</label><br />
-                            <input
-                                size="50"
-                                type="text"
-                                name="name"
-                                placeholder="Enter your last name here"
-                            /><br /><br />
+                        <label>Last Name:</label><br />
+                        <input
+                            size="50"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your last name here"
+                        /><br /><br />
 
-                            <label>Email:</label><br />
-                            <input
-                                size="50"
-                                type="email"
-                                name="name"
-                                placeholder="Enter your email here"
-                            /><br /><br />
+                        <label>Email:</label><br />
+                        <input
+                            size="50"
+                            type="email"
+                            name="name"
+                            placeholder="Enter your email here"
+                        /><br /><br />
 
-                            <label>Phone Number:</label><br />
-                            <input
-                                size="50"
-                                type="tel"
-                                name="phone"
-                                placeholder="Enter your phone number here"
-                            /><br /><br />
+                        <label>Phone Number:</label><br />
+                        <input
+                            size="50"
+                            type="tel"
+                            name="phone"
+                            placeholder="Enter your phone number here"
+                        /><br /><br />
 
-                            <label>NRIC/Passport:</label><br />
-                            <input
-                                size="50"
-                                type="text"
-                                name="phone"
-                                placeholder="Enter your NRIC/Passport number here"
-                            /><br /><br />
+                        <label>NRIC/Passport:</label><br />
+                        <input
+                            size="50"
+                            type="text"
+                            name="phone"
+                            placeholder="Enter your NRIC/Passport number here"
+                        /><br /><br />
 
-                            <label>Licence Number:</label><br />
-                            <input
-                                size="50"
-                                type="text"
-                                name="phone"
-                                placeholder="Enter your licence number here"
-                            /><br /><br />
+                        <label>Licence Number:</label><br />
+                        <input
+                            size="50"
+                            type="text"
+                            name="phone"
+                            placeholder="Enter your licence number here"
+                        /><br /><br />
 
-                            <label>Licence Card:</label><br />
-                            <button
-                                type="submit"
-                                onclick="window.location.href = './editProfile.html';"
-                            >
-                                Upload</button
-                            ><br /><br />
+                        <label>Licence Card:</label><br />
+                        <input type="file" name="Licence Card" />
+                        <br /><br />
 
-                            <label>NRIC/Passport Card:</label><br />
-                            <button
-                                type="submit"
-                                onclick="window.location.href = './editProfile.html';"
-                            >
-                                Upload</button
-                            ><br /><br />
-                        </fieldset>
-                    </form>
+                        <label>NRIC/Passport Card:</label><br />
+                        <input type="file" name="NRIC Card" />
+                        <br /><br />
+                    </fieldset>
                     <br />
-                    <div class="footButton">
-                        <button
-                            type="submit"
-                            onclick="window.location.href = './userProfile.html';"
-                        >
-                            Save
+                    <footer class="footButton">
+                        <button type="submit" value="submit" name="submit">
+                            <a href="./userProfile.html">Save</a>
                         </button>
-                        <button
-                            type="reset"
-                            onclick="window.location.href = './editProfile.html';"
-                        >
-                            Clear Form
+                        <button type="reset" name="reset">
+                            <a href="./editProfile.html">Clear Form</a>
                         </button>
-                    </div>
-                </div>
+                    </footer>
+                </form>
             </div>
-        </div>
+        </section>
     </body>
 </html>
