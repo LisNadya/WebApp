@@ -2,6 +2,7 @@
 <html lang="en">
 <head >
    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
    <title>CyberGo - Landing Page</title>
    <!--    Custom styles   -->
    <link rel="stylesheet" href="css/reset.css" />
@@ -12,78 +13,136 @@
 
 
 <body>
-    <div id="headtop">
-        <div id="pageTitle">
-            <h1>
-                RENT YOUR<br>
-                DREAM CAR<br>
-                TODAY<br>
-            </h1>
-            <h2>
-                Don't wanna miss out on our offers?<br>
-                Sign Up here<br>
-            </h2> 
-        </div>
+    <div id="main">
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </span>
+            <a href="#home" id="brand-header">CyberGo</a>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#about" id="navbar-item">About Us</a>
+                </li>
+                <li>
+                    <a href="#service" id="navbar-item">Our Service</a>
+                </li>
+                <li>
+                    <a href="#partner" id="navbar-item">Our Partners</a>
+                </li>
+                <li>
+                    <a href="#signUp" id="navbar-item">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div>
+            <h1 id="mainTitle">RENT YOUR DREAM CAR <br> TODAY!</h1>
+            <div class="searchCar">
+                <form>
+                    <h2>Search for car rental</h2>
+                    <select id="dropdown" name="pickup point">
+                        <option>Select Pickup Location</option>
+                        <option>MMU Cyberjaya (STAD)</option>
+                        <option>Tamarind Square</option>
+                        <option>DPulze</option>
+                        <option>Putrajaya Sentral</option>
+                        <option>McDonalds Cyberjaya</option>
+                    </select>
 
-        <div id="rightSide">
-            <form>
-                <fieldset id="loginForm">
-                    <h1>Search for Car Rental</h1>
-                    <input type="text" name="type" placeholder="Car Type">
-                    <input type="text" name="location" placeholder="Pickup Location">
-                    <input type="text" name="pickup" placeholder="Pickup Date" onclick="(this.type='date')">
-                    <input type="text" name="return" placeholder="Return Date" onclick="(this.type='date')">
-                    
-                    <a href="login.html">Search  <span class="raquo">&raquo;</span></a>
-                </fieldset>
-            </form>
+                    <select id="dropdown" name="carType">
+                        <option>Select Car Type</option>
+                        <option>SUV</option>
+                        <option>MPV</option>
+                    </select>
+
+                    <input id="input-box" type="text" name="pickup" placeholder="Pickup Date" onclick="(this.type='date')">
+                    <input id="input-box" type="text" name="return" placeholder="Return Date" onclick="(this.type='date')">
+
+                    <a id="searchBtn" href="login.html"><button class="button button2" type="submit"><span>Search</span></button></a>
+                </form>
+            </div>
+            <div id="wrapper">
+                <button class="button button1">LOGIN</button>
+                <h2>Don't wanna miss out on our offers? <a href="#register" id="underline">Sign Up HERE</a></h2>
+            </div>
+        </div>
+        <div class="content">
+            <div id="service">
+                <h1>Our Service</h1>
+                <p id="text-content">Today, we process over 520 million queries across our platforms each 
+                    month for travel information, helping millions of travelers around the 
+                    globe make confident decisions. With every query, KAYAK searches hundreds 
+                    of travel sites to show travelers the information they need to find the
+                    right flights, hotels, rental cars and vacation packages.</p>
+
+                <p id="text-content">In over a decade, we've grown from a small office of 14 employees into 
+                    a company of over 1,000 travel-loving teammates working across 7 
+                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
+                    Mundi and HotelsCombined. Together, we help people experience the world 
+                    by creating their favorite travel tools.</p>      
+            </div>
+
+            <div id="partner">
+                <h1>Our Partners</h1>
+                <p id="text-content">Today, we process over 520 million queries across our platforms each 
+                    month for travel information, helping millions of travelers around the 
+                    globe make confident decisions. With every query, KAYAK searches hundreds 
+                    of travel sites to show travelers the information they need to find the
+                    right flights, hotels, rental cars and vacation packages.</p>
+
+                <p id="text-content">In over a decade, we've grown from a small office of 14 employees into 
+                    a company of over 1,000 travel-loving teammates working across 7 
+                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
+                    Mundi and HotelsCombined. Together, we help people experience the world 
+                    by creating their favorite travel tools.</p>
+            </div>
+            
+            <div id="about">
+                <h1>About Us</h1>
+                <p id="text-content">Today, we process over 520 million queries across our platforms each 
+                    month for travel information, helping millions of travelers around the 
+                    globe make confident decisions. With every query, KAYAK searches hundreds 
+                    of travel sites to show travelers the information they need to find the
+                    right flights, hotels, rental cars and vacation packages.</p>
+
+                <p id="text-content">In over a decade, we've grown from a small office of 14 employees into 
+                    a company of over 1,000 travel-loving teammates working across 7 
+                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
+                    Mundi and HotelsCombined. Together, we help people experience the world 
+                    by creating their favorite travel tools.</p>
+            </div>
         </div>
         
-    </div>
-    
-    <div id="detailsBody">
-        <div class="salesBox">
-            <h2>Our Service</h2>
-                <p>Today, we process over 520 million queries across our platforms each 
-                    month for travel information, helping millions of travelers around the 
-                    globe make confident decisions. With every query, KAYAK searches hundreds 
-                    of travel sites to show travelers the information they need to find the
-                    right flights, hotels, rental cars and vacation packages.</p>
-    
-                 <p>In over a decade, we've grown from a small office of 14 employees into 
-                    a company of over 1,000 travel-loving teammates working across 7 
-                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
-                    Mundi and HotelsCombined. Together, we help people experience the world 
-                    by creating their favorite travel tools.</p>                   
-        </div>
-        <div class="salesBox" >
-            <h2>About Us</h2>
-                <p>Today, we process over 520 million queries across our platforms each 
-                    month for travel information, helping millions of travelers around the 
-                    globe make confident decisions. With every query, KAYAK searches hundreds 
-                    of travel sites to show travelers the information they need to find the
-                    right flights, hotels, rental cars and vacation packages.</p>
-    
-                <p>In over a decade, we've grown from a small office of 14 employees into 
-                    a company of over 1,000 travel-loving teammates working across 7 
-                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
-                    Mundi and HotelsCombined. Together, we help people experience the world 
-                    by creating their favorite travel tools.</p>
-        </div>
-        <div class="salesBox">
-            <h2>Be a Partner</h2>
-                <p>Today, we process over 520 million queries across our platforms each 
-                    month for travel information, helping millions of travelers around the 
-                    globe make confident decisions. With every query, KAYAK searches hundreds 
-                    of travel sites to show travelers the information they need to find the
-                    right flights, hotels, rental cars and vacation packages.</p>
-    
-                <p>In over a decade, we've grown from a small office of 14 employees into 
-                    a company of over 1,000 travel-loving teammates working across 7 
-                    international brands; KAYAK, SWOODOO, checkfelix, momondo, Cheapflights, 
-                    Mundi and HotelsCombined. Together, we help people experience the world 
-                    by creating their favorite travel tools.</p>
+        <div class="footer">
+            <div class="row">
+                <div class="column">
+                    <h2>Contact</h2>
+                    <p>+601123456890</p>
+                    <p><a id="underline" href="mailto:help@cybergo.com.my">help@cybergo.com.my</a></p>
+                    <p>Persiaran Multimedia, 63000, Cyberjaya, Selangor</p>
+                </div>
+                <div class="column">
+                    <h2>Connect With Us</h2>
+                    <p>Work With Us</p>
+                    <p>Vehicle Leasing</p>
+                </div>
+                <div class="column">
+                    <h2>Help</h2>
+                    <p>Privacy Notice</p>
+                    <p>Terms And Condition</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Navbar
+        var mainNav = document.getElementById("js-menu");
+        var navbarToggle = document.getElementById("js-navbar-toggle");
+
+        navbarToggle.addEventListener("click", function() {
+            mainNav.classList.toggle("active");
+        });
+        </script>
 </body>
 </html>
