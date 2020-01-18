@@ -17,6 +17,14 @@
     </head>
 
     <body>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
         <!--Sidebar-->
         <div id="leftBar">
             <div id="user">
@@ -40,6 +48,7 @@
 
         <!--Begin page content-->
         <div id="body">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
             <div id="profile">
                 <h1>User Profile</h1>
                 <form>
@@ -127,5 +136,18 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // Sidebar
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
     </body>
 </html>
