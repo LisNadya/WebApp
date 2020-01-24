@@ -1,0 +1,242 @@
+/*Left bar settings*/
+#leftBar{
+   position:fixed;
+   top:0;
+   left:0;
+   width:15rem;
+   height:100%;
+   margin-right:12em;
+   background:#050517;
+}
+#user{
+   float:left;
+   margin-bottom:2em;
+   background:rgb(129, 173, 171); /*#F3D8C7 rgb(129, 173, 171) #050517*/
+   width:70%;
+   padding:25% 15%;
+}
+#user img{
+   float:left;
+   width:70px;
+   margin-right:1em;
+   height:70px;
+   border-radius:100px;
+   box-shadow:0 0 4px rgb(155, 155, 155);
+}
+
+#user p{
+   float:right;
+   margin-top:1em;
+   font-size:12pt;
+}
+#leftBar nav{
+   padding:1em 3em;
+}
+
+#leftBar nav a{
+   display:block;
+   padding: 0.5em;
+   border-bottom:1px solid rgb(233, 233, 233);
+   transition:0.5s;
+}
+
+#leftBar nav #selected{
+    border-bottom:5px solid #F3D8C7;
+    color:#F3D8C7;
+}
+
+#leftBar nav a:hover{
+   border-bottom:5px solid #F3D8C7;
+}
+
+#signOut{
+   position:absolute;
+   bottom:0;
+   left:0;
+   width:100%;
+   text-align:center;
+   padding: 1em 0;
+}
+
+#leftBar nav a, #signOut a{
+   color:rgb(233, 233, 233);
+   transition-duration:0.5s;
+}
+
+#leftBar nav a:hover, #signOut a:hover{
+    color:#F3D8C7;
+}
+
+/*Main body settings*/
+#body{
+    position:absolute;
+    margin:5em 2em 2em 20em;
+    color:rgb(41, 41, 41);
+}
+
+hgroup{
+    position:fixed;
+    width:82%;
+    left:15rem;
+    top:0;
+    padding:0.7em 0;
+    background:rgb(255, 255, 255);
+    border-bottom:2px solid #D3D5D7;
+    color:#050517;
+    z-index:1;
+}
+
+hgroup h1{
+    margin-left:1em;
+    font-size:1.1em;
+    text-transform:uppercase;
+    font-weight:normal;
+    color:rgb(97, 97, 97);
+}
+@media screen and (min-width: 451px) and (max-width: 900px) {
+   #leftBar{
+      width:10rem;
+   }
+   #user{
+      padding:1.5rem;
+   }
+
+   #user img{
+      float:none;
+      margin-left:15%;
+   }
+   #user p{
+      float:none;
+      text-align:center;
+      margin-top:1em;
+   }
+   #leftBar nav{
+      padding:1em;
+      font-size:8pt;
+   }
+   
+   #body{
+      margin:5em 2em 2em 13em;
+   }
+
+   hgroup{
+      width:82%;
+      left:10rem;
+   }
+
+   hgroup h1{
+      margin-left:1em;
+      font-size:0.8em;
+   }
+}
+
+@media screen and (max-width: 450px) {
+    #user{
+       position:absolute;
+       background:rgb(129, 173, 171);
+       height:100%;
+       width:60%;
+       margin-bottom:1em;
+       padding:2em 0;
+    }
+    #user img{
+       float:none;
+       display:block;
+       width:50px;
+       margin:auto;
+       height:50px;
+       border-radius:100px;
+       box-shadow:0 0 4px rgb(155, 155, 155);
+    }
+    #user p{
+       width:100%;
+       display:block;
+       text-align:center;
+       font-size:12pt;
+    }
+ 
+   #leftBar{
+      position:fixed;
+      height:9.25rem;
+      overflow:hidden;
+      background:#050517;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:-1;
+   }
+
+   #leftBar nav{
+       position:absolute;
+       bottom:0;
+       right:0;
+       width:40%;
+       background:transparent;
+       padding:0;
+    }
+
+   #leftBar nav #selected{
+      border-bottom:none;
+      color:rgb(228, 228, 228);
+   }
+    
+   #leftBar nav a{
+      display:block;
+      border:none;
+      font-size:9pt;
+      background:transparent;
+      padding:0.5em 1em;
+
+      border-top:0.5px solid grey;
+      transition-duration:0.5s;
+   }
+   
+   #leftBar nav a:hover{
+      border-left: 5px solid rgb(228, 228, 228);
+      color:rgb(228, 228, 228);
+   }
+
+
+   #signOut{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      font-size:8pt;
+      text-align:left;
+      padding: 1em;
+   }
+   
+   #leftBar nav a{
+      color:rgb(228, 228, 228);
+      transition:0.5s;
+   }
+
+   #signOut a{
+      color:rgb(0, 0, 0);
+      transition:0.5s;
+   }
+   
+   #signOut a:hover{
+      color:#F3D8C7;
+   }
+
+   hgroup{
+      width:100%;
+      top:9.25rem;
+      text-align:center;
+      border-top:1px solid #D3D5D7;
+      left:0;
+   }
+
+   hgroup h1{
+      margin-left:1em;
+      font-size:0.8em;
+   }
+     /*Main body settings*/
+   #body{
+      top:10rem;
+      margin:2em;
+      z-index:-1;
+   }
+} 

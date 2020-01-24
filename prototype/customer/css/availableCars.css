@@ -1,0 +1,248 @@
+
+/* Promotion header settings */
+#promotion{
+   margin-bottom:2em;
+}
+
+#promotion img{
+   width:100%;
+   
+   box-shadow:2px 2px 4px rgb(54, 54, 54);
+   border-radius:0.5em;
+}
+
+
+#pagLeft, #pagRight{
+   position:absolute;
+   color:rgb(255, 255, 255);
+   
+   font-size:300%;
+   margin-top:12%;
+   transition: 0.5s;
+}
+
+#pagLeft{
+   left:1%;
+}
+
+#pagRight{
+   right:1%;
+}
+
+#pagLeft:hover, #pagRight:hover{
+   color:#CF5C36;
+}
+/* Items settings */
+.sales{
+   float:left;
+   width:100%;
+   margin-top:2em;
+   margin-bottom:2em;
+}
+.sales figure{
+   float:left;
+   background:white;
+   width:60%;
+   border-radius:0.5em;
+   box-shadow:2px 2px 4px rgb(54, 54, 54);
+   padding:1em;
+}
+
+.sales figure img{
+   float:left;
+   border-radius:1em;
+   width:70%;
+   border:5px solid #D3D5D7;
+}
+
+.sales figure figcaption{
+   float:right;
+   width:27%;
+}
+
+.sales figure figcaption h2{
+   text-align:center;
+}
+
+
+.sales figure figcaption ul{
+   padding-left:4em;
+}
+
+.sales p{
+   float:right;
+   margin-top:10%;
+   width:30%;
+   font-size:18pt;
+   text-align:center;
+   text-transform:uppercase;
+}
+
+.sales p a{
+   display:block;
+   background:rgb(233, 75, 47);
+   border:none;
+   padding:1em 2em;
+   border-radius:2em;
+   font-size:15pt;
+   text-align:center;
+   margin-top:1em;
+   color:black;
+   cursor:pointer;
+   transition-duration:0.5s;
+}
+
+
+.sales p a:hover{
+   color:#D3D5D7;
+   letter-spacing:2px;
+   background:#050517;
+   box-shadow:2px 2px 4px rgb(54, 54, 54);
+}
+
+
+@media screen and (min-width: 451px) and (max-width: 900px) {
+   .sales figure{
+      width:92%;
+   }
+
+   .sales figure img{
+      width:95%;
+   }
+
+   .sales figure figcaption{
+
+      float:left;
+      font-size:80%;
+      width:100%;
+   }
+
+   .sales figure figcaption ul{
+      margin:auto;
+      width:20%;
+   }
+
+   .sales p a{
+      margin:auto;
+      margin-top:1em;
+      font-size:8pt;
+      width:30%;
+      padding:1em 2em;
+   }
+
+   .sales p{
+      float:left;
+      margin-left:10px;
+      width:100%;
+      font-size:8pt;
+      text-align:center;
+   }
+
+   #promotion h1{
+      font-size:64%;
+   }
+
+   #pagLeft, #pagRight{
+      font-size:15pt;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   /* Promotion header settings */
+   #promotion{
+      position:relative;
+      margin-top:2rem;
+      margin-bottom:2em;
+      background:white;
+      border-radius:0.5em;
+      box-shadow:2px 2px 4px rgb(54, 54, 54);
+      padding:1em 5%;
+   }
+
+   #promotion img{
+      width:100%;
+   }
+
+   #pagLeft, #pagRight{
+      position:absolute;
+      color:rgb(46, 46, 46);
+      font-size:100%;
+      margin-top:10%;
+      transition-duration: 0.5s;
+   }
+
+   #pagLeft{
+      left:1%;
+   }
+
+   #pagRight{
+      right:1%;
+   }
+
+   #pagLeft:hover, #pagRight:hover{
+      color:#e2c044;
+   }
+
+   /* Items settings */
+   .sales{
+      float:left;
+      width:100%;
+      margin-bottom:2em;
+   }
+   .sales figure{
+      float:left;
+      background:white;
+      width:96%;
+      border-radius:0.5em;
+      box-shadow:2px 2px 4px rgb(54, 54, 54);
+      padding:2%;
+   }
+
+   .sales figure img{
+      float:left;
+      border-radius:0.5em;
+      width:96%;
+      border:2% solid #d3d0cb;
+   }
+
+   .sales figure figcaption{
+      float:left;
+      width:100%;
+      text-align:center;
+   }
+
+   .sales figure figcaption h2{
+      text-align:center;
+   }
+
+
+   .sales figure figcaption ul{
+      list-style-type:none;
+      margin-left:-40px;
+   }
+
+   .sales p{
+      float:left;
+      margin-top:10%;
+      width:100%;
+      font-size:18pt;
+      text-align:center;
+      text-transform:uppercase;
+   }
+
+   .sales p a{
+      display:block;
+      background:rgb(233, 75, 47);
+      border:none;
+      padding:1em 4em;
+      border-radius:2em;
+      margin:1em auto;
+      cursor:pointer;
+      transition-duration:0.5s;
+   }
+
+   .sales p a:hover{
+      color:white;
+      background:rgb(22, 22, 22);
+   }
+}

@@ -1,0 +1,318 @@
+body {
+    overflow-x: hidden;
+    background: #FFDB58;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/**Start of Sidebar**/
+#avatar img {
+    float: left;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#sidebar {
+    background: whitesmoke;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0.1rem 0.1rem lightgray;
+}
+
+#avatar {
+    background: gray;
+    float: left;
+    padding: 1.5em 3em 1em 1.5em;
+}
+
+#avatar a {
+    margin-top: 5rem;
+}
+
+#avatar span {
+    float: right;
+}
+
+#avatar b {
+    width: 20%;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding-bottom: 0.5rem;
+    border-bottom: .1em solid lightgray;
+    margin-bottom: 1rem;
+}
+
+#sidebarnav {
+    margin-top: 9rem;
+    margin-left: 1rem;
+}
+
+nav {
+    margin-right: 1rem
+}
+
+#logout {
+    margin-bottom: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 130px;
+}
+
+#logoutpic {
+    margin-bottom: 0.3rem;
+    position: absolute;
+    left: 95px;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+}
+
+/**End of Sidebar**/
+
+#body {
+
+    position: absolute;
+    top: 0px;
+    left: 350px;
+}
+
+#overview {
+    margin-left: 1rem;
+}
+
+#caroverview {
+    float: left;
+    width: 100%;
+}
+
+.carbox .left {
+    float: left;
+    color: white;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.carbox .right {
+    float: right;
+    color: white;
+    text-align: right;
+}
+
+
+
+#content {
+    float: left;
+    width: 100%;
+    padding: 1em;
+    height: 100%;
+    margin-bottom: 10rem;
+}
+
+.cardesc img {
+    float: left;
+    width: 350px;
+    height: 200px;
+}
+
+.carinfo {
+    float: left;
+    width: 300px;
+    font-size: 17pt;
+}
+
+.car-desc {
+    border-bottom: 0;
+    margin-left: 1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+
+}
+
+.sidelink {
+    transition: 0.5s;
+}
+
+.sidelink:hover {
+    color: #FFDB58;
+
+}
+
+.car-list {
+    list-style: disc;
+}
+
+
+@media screen and (min-width:1024px){
+    .cardesc img{
+        width:250px;
+        height:150px;
+    }
+    .carinfo{
+        width:200px;
+        font-size:1.5rem;
+    }
+    .carbox {
+        float: left;
+        background-color: #587b7f;
+        display: inline;
+        border-radius: 15px;
+        border: 1px solid black;
+        margin-left: 0.7rem;
+        padding: 4% 4%;
+        font-size: 1.3rem;
+    }
+
+    .carstatus {
+        float: left;
+        margin-top: 10%;
+        font-size: 25pt;
+    }
+
+    .car {
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+    .car::after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .cardesc {
+        float: left;
+        padding: 2rem 0.5rem 2rem 2rem;
+        border-radius: 15px;
+        background: white;
+        margin-right: 2em;
+    }
+}
+
+@media screen and (min-width:787px) and (max-width:1023px) {
+
+    .carbox {
+        float: left;
+        background-color: #587b7f;
+        display: inline;
+        border-radius: 15px;
+        border: 1px solid black;
+        margin-left: 0.5rem;
+        padding: 4% 4%;
+        font-size: 1.5rem;
+    }
+
+    .carstatus {
+        float: left;
+        margin-bottom: 10%;
+        margin-top: 2%;
+        font-size: 1.7rem;
+    }
+
+    .car {
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+    .car::after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .cardesc {
+        float: left;
+        padding: 2rem 2.5rem 2rem 2rem;
+        border-radius: 15px;
+        background: white;
+        margin-right: 2em;
+        width:70%;
+    }
+
+    .carinfo {
+        float: left;
+        width: 50%;
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width:786px) {
+    .carbox {
+        float: left;
+        background-color: #587b7f;
+        display: inline-block;
+        border-radius: 15px;
+        border: 1px solid black;
+        margin-left: 1rem;
+        padding: 4% 4%;
+        font-size: 1.3rem;
+        clear:both;
+        min-width: 30%;
+        margin-bottom: 1rem;
+    }
+
+    .carstatus {
+        float: left;
+        margin-bottom: 10%;
+        margin-top: 2%;
+        font-size: 25pt;
+    }
+
+    .car {
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+    .car::after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .cardesc {
+        float: left;
+        padding: 2rem 0.5rem 2rem 2rem;
+        border-radius: 15px;
+        background: white;
+        margin-right: 2em;
+        min-height: 15rem;
+        width:90%;
+    }
+
+
+}
+
+.car-name {
+    font-weight: bold;
+    margin-left: 2rem;
+}
