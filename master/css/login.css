@@ -35,8 +35,12 @@
      border:1px solid rgb(163, 163, 163);
      border-radius:1em;
  }
+
+ input{
+    width:100%;
+ }
  
- input:focus, select:focus{
+ button:focus, input:focus, select:focus{
      outline:none;
  }
  
@@ -170,6 +174,9 @@
          border-radius:0;
      }
  
+     select{
+         width:100%;
+     }
      input::placeholder{
          color:black;
      }

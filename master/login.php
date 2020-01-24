@@ -86,12 +86,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         }
         //check full name
         if(!preg_match("/[a-z]/i", $fullName)) {
-            $nameErr = "Please make sure your name only consists of alphabetical letters";
+            $nameErr = "Only alphabets are allowed in your name";
             $valid = false;
         }
         //check password
         if($pass != $passConfirm){
-            $passErr_reg = "Please confirm your password by typing the same as your password above";
+            $passErr_reg = "Password are not identical";
             $valid = false;
         }
         //check email
@@ -159,9 +159,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </fieldset>
         </form>
     </section>
-    <section id='rightSide'>
+    <section id='rightSide' style='overflow-y:auto;'>
         <form action='login.php' method='post'>
-            <fieldset id='registerForm'>
+            <fieldset id='registerForm' >
                 <p>Not a member yet?</p>
                 <h1>Create Account</h1>
 
@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
                 <?php 
                     if(isset($userErr_reg) && !empty($userErr_reg)){ 
-                        echo "<div class='error'>⚠ $userErr_reg</div>";
+                        echo "<div class='error'  style='font-size:10pt; padding:2%;'>⚠ $userErr_reg</div>";
                     } 
                 ?>
                 <input type='text' name='username' title='Example: SamMendes95' placeholder='Username' required>
