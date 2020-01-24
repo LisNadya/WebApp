@@ -1,0 +1,32 @@
+button {
+    display: inline-block;
+    width: 150px;
+    background: white;
+    border: none;
+    padding: 1em 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background: #aaa;
+}
+
+#body {
+    width: 75%;
+}
+
+#profile {
+    position: relative;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 4px rgb(54, 54, 54);
+    padding: 1em;
+}
+
+#enter {
+    display: inline-block;
+}

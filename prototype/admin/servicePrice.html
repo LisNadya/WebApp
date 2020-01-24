@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Manage Service Price</title>
+   <!--    Custom styles   -->
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+   <link rel="stylesheet" href="css/dashboard.css" />
+   <link rel="stylesheet" href="css/servicePrice.css" />
+   <!--    Icons   -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="leftBar">
+        <div id="user">
+            <img src="img/default.jpg" alt="Profile Image">
+            <p>
+                Hi <br/>
+                <b >Kuang Tar</b>
+            </p>
+        </div>
+        <nav>
+            <a href="cartype.html" >Manage Types of Vehicles</a>
+            <a href="user.html" >Manage Users</a>
+            <a href="servicePrice.html" id="selected">Manage Service Price</a>
+            <a href="promotion.html">Manage Promotions</a>
+          </nav>
+        <div id="signOut">
+            <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
+        </div>
+    </div>
+    
+    <hgroup>
+        <h1>Manage Service Price</h1>
+    </hgroup>
+
+    <div id="body">
+        <div id="title">
+            <h1>Service Price</h1>
+        </div>
+        <div id="content">           
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">Current Price Rate</div>
+                    <div class="card-main">
+                        <div class="main-description">0.2</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Service Charge</div>
+                    <div class="card-main">
+                        <div class="main-description">MYR 3.00</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Delivery Charge</div>
+                    <div class="card-main">
+                        <div class="main-description">MYR 3.00</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Extra Time</div>
+                    <div class="card-main">
+                        <div class="main-description">MYR 5.00 Per Hour</div>
+                    </div>
+                </div>
+            </div>
+                
+            <button class="button button1 open-modal rightAlign" data-open="modal2">Modify Rate</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                <h1>New Service Rate</h1>
+                <button class="close-modal" aria-label="close modal" data-close>✕</button>
+            </header>
+            <div class="modal-content">
+                <p>
+                    <label>Price Rate: </label>
+                    <input type="text" name="priceRate" placeholder="Enter Price Rate" value="0.2">
+                </p>
+                <p>
+                    <label>Service Charge: </label>
+                    <input type="text" name="serviceCharge" placeholder="Enter Service Charge" value="3.00">
+                </p>
+                <p>
+                    <label>Delivery Charge: </label>
+                    <input type="text" name="deliveryCharge" placeholder="Enter Delivery Charge" value="3.00">
+                </p>
+                <p>
+                    <label>Extra Time (Per Hour): </label>
+                    <input type="text" name="extraTime" placeholder="Enter Extra Time Charge Per Hour" value="5.00">
+                </p>
+            </div>
+            <footer class="modal-footer">
+                <button class="button button1 rightAlign">Create</button>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="js/promotion.js"></script>
+</body>
+</html>

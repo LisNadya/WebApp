@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>Payment</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/default.css" />
+        <link rel="stylesheet" href="css/sidebar.css" />
+        <link rel="stylesheet" href="css/payment.css" />
+
+        <!--Icons-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+
+    <body>
+        <!--Sidebar-->
+        <aside id="leftBar">
+            <div id="user">
+                <img src="img/default.jpg" alt="Profile Picture" />
+                <p>
+                    Hi <br />
+                    <b>Kuang Tar</b>
+                </p>
+            </div>
+            <nav>
+                <a href="available_cars.html" id="selected">View List of Cars</a>
+                <a href="userProfile.html">User Profile</a>
+                <a href="carRentHistory.html">Rental History</a>
+            </nav>
+            <div id="signOut">
+                <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
+            </div>
+        </aside>
+
+        <hgroup>
+            <h1>Payment</h1>
+        </hgroup>
+
+        <!--Page Content-->
+        <section id="body">
+            <!--Begin page content-->
+            <div id="payment">
+                <header>
+                    <h1>Thank you for your purchase</h1>
+                    <h2>Please proceed with the payment</h2>
+                </header>
+                <br />
+                <form>
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <label>Full Name:</label><br />
+                        <input
+                            size="50"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your full name here"
+                        /><br /><br />
+
+                        <label>Contact Number:</label><br />
+                        <input
+                            size="50"
+                            type="tel"
+                            name="phone"
+                            placeholder="Enter your contact number here"
+                        /><br /><br />
+
+                        <label>Adress of Delivery:</label><br />
+                        <textarea
+                            cols="50"
+                            rows="5"
+                            name="address"
+                            placeholder="Enter address for delivery here"
+                        ></textarea
+                        ><br /><br />
+
+                        <label>Payment via:</label><br />
+                        <select>
+                            <option>Choose Payment Option</option>
+                            <option>Direct Payment</option>
+                            <option>Online Banking</option>
+                            <option>Credit/Debit card</option>
+                        </select>
+                    </fieldset>
+                    <br />
+                    <button type="submit" value="submit" name="submit">
+                        <a href="./paymentComplete.html">Proceed</a>
+                    </button>
+                    <button type="reset" name="reset">
+                        <a href="./payment.html">Clear Form</a>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
