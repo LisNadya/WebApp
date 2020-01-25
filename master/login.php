@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $userPass = "vendorPass";
         $table = "vendor";
         $insertVar = "vendorID, vendorName, vendorPass, vendorEmail, vendorContact";
-        $location = "Vendor-Dashboard.php";
+        $location = "vendor-dashboard.php";
     }
     else if($user==2){
         $userID = "adminID";
