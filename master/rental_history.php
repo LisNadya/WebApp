@@ -2,7 +2,7 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$current = $_SESSION['cusID'];
+$current = $USERID;
 $sql = "SELECT carModel, carPlateNo, paymentDate, bookingDate, bookingDuration FROM car 
     INNER JOIN (booking INNER JOIN payment ON payment.bookingID = booking.bookingID) ON car.carID = booking.carID
     WHERE booking.cusID = '$current'
