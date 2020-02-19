@@ -79,3 +79,28 @@ label, input, select{
     border-radius:0;
     width:100%;
 }
+
+    
+@media screen and (min-width: 451px) and (max-width: 900px) {
+    form{
+        width:50%;
+        margin-left:12rem;
+    }
+
+    input[type="submit"], input[type="reset"]{
+        width:100%;
+    }
+}
+@media screen and (max-width: 450px) {
+    form{
+        position:absolute;
+        width:80%;
+        top: 13rem;
+        margin:auto;
+        z-index:-9;
+    }
+    
+    input[type="submit"], input[type="reset"]{
+        width:100%;
+    }
+}
