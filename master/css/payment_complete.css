@@ -1,0 +1,97 @@
+button {
+    display: inline-block;
+    width: 150px;
+    background: white;
+    border: none;
+    padding: 1em 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background: #aaa;
+}
+
+#body {
+    width: 75%;
+}
+
+fieldset {
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-box {
+    margin: 30px 20px;
+}
+
+.table-row {
+    display: table;
+    width: 100%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 18px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 50, 0.3);
+}
+
+.table-head {
+    background: #ad8906;
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-head .table-cell {
+    border-right: none;
+}
+
+.table-cell {
+    display: table-cell;
+    width: auto;
+    text-align: center;
+    padding: 4px 0;
+    vertical-align: middle;
+}
+
+.first-cell {
+    width: 20%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.last-cell {
+    width: 80%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#paymentC {
+    position: relative;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 4px rgb(54, 54, 54);
+    padding: 1em;
+}
