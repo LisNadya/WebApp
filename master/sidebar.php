@@ -70,6 +70,7 @@ while($row = $getUser->fetch_assoc()){
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
 ?>
 
+<?php if($USERTYPE == 0 || $USERTYPE == 2){?>
 <!DOCTYPE html>
 <html lang="en">
 <head lang="en">
