@@ -70,7 +70,6 @@ while($row = $getUser->fetch_assoc()){
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
 ?>
 
-<?php if($USERTYPE == 0 || $USERTYPE == 2){?>
 <!DOCTYPE html>
 <html lang="en">
 <head lang="en">
@@ -126,51 +125,3 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
         </hgroup> 
     </body>
     </html> 
-
-<?php } else if($USERTYPE == 1){?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css\sidebar-v.css">
-    <title>
-        Vendor Dashboard
-    </title>
-    </head>
-
-    <body>
-        <aside id="sidebar">
-            <div id="avatar">
-                <img src="img/default.jpg" alt="avatardp">
-                <span>
-                    Hi, <br />
-                    <b id="avatarname">Lis Nadya binti Zaidi</b>
-                </span>
-            </div>
-            <!--End of avatar-->
-            <nav id="sidebarnav">
-                <?php
-                    foreach($navigation as $i => $page){
-                        $count = 0;
-                        foreach($page as $nav){
-                            echo $nav;
-                            if($count==0 && $i == $pgName){
-                            echo "id='selected'";
-                            }
-                            $count++;
-                        }
-                    }
-                ?>
-            </nav>
-            <nav id="nav-logout">
-                <a href="login.php" class="sidelink">
-                    <img src="img/logout-512.png" id="logoutpic" alt="Log out from profile">
-                    <div id="logout">Sign Out</div>
-                </a>
-
-            </nav>
-        </aside>
-    </body>
-    </html>
-<?php } ?>

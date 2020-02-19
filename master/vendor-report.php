@@ -12,7 +12,7 @@
     <?php
     include "sidebar.php";
 
-    // $conn = $DB->connect();
+    $conn = $DB->connect();
     // $sql = "select * from car";
     // $getCar = $conn->query($sql) or die("Error in $sql");;
     // $conn->close();
@@ -30,41 +30,26 @@
                     <th>No. of Days</th>
                     <th>Profit</th>
                 </tr>
-                <tr>
-                    <td>Perodua Axia</td>
-                    <td>RM30/day</td>
-                    <td>11/1/2020</td>
-                    <td>20/1/2020</td>
-                    <td>9 Day(s)</td>
-                    <td>RM270</td>
-                </tr>
-                <tr>
-                    <td>Proton Iriz</td>
-                    <td>RM40/day</td>
-                    <td>5/1/2020</td>
-                    <td>10/1/2020</td>
-                    <td>5 Day(s)</td>
-                    <td>RM200</td>
-                </tr>
-                <tr>
-                    <td>Perodua Alza</td>
-                    <td>RM60/day</td>
-                    <td>10/1/2020</td>
-                    <td>17/1/2020</td>
-                    <td>7 Day(s)</td>
-                    <td>RM420</td>
-                </tr>
-                <tr>
-                    <td>Honda Jazz</td>
-                    <td>RM90/day</td>
-                    <td>10/1/2020</td>
-                    <td>11/1/2020</td>
-                    <td>1 Day(s)</td>
-                    <td>RM90</td>
-                </tr>
+                <?php
+                    $totalprofit = 0.0;
+                    $sqlquery = mysqli_query($conn, "select * from car where booked = 1 and month(enddate) = month(current_date())");
+                    while($row = mysqli_fetch_array($sqlquery)){
+                        echo "<tr>";
+                        echo "<td>".$row['carModel']."</td>";
+                        echo "<td>"."RM".$row['carPrice']."/day</td>";
+                        echo "<td>".$row['startdate']."</td>";
+                        echo "<td>".$row['enddate']."</td>";
+                        $date1 = new DateTime($row['startdate']);
+                        $date2 = new DateTime($row['enddate']);
+                        $interval = $date1->diff($date2);
+                        echo "<td>".$interval->d." Day(s)</td>";
+                        echo "<td>RM ".number_format($interval->d * $row['carPrice'],2)."</td>";
+                        $totalprofit = (float)$totalprofit + (float)($interval->d * $row['carPrice']);
+                    }
+                ?>
                 <tr>
                     <th colspan="5">Total Profit</th>
-                    <td>RM980</td>
+                    <td>RM <?php echo number_format($totalprofit,2); ?></td>
                 </tr>
             </table>
             <div id="profit-calculator">
@@ -83,7 +68,7 @@
                             Service Fee:
                         </th>
                         <td>
-                            RM98
+                            RM <?php echo $servicefee = $totalprofit * 0.1; ?>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +84,7 @@
                             GST Fee:
                         </th>
                         <td>
-                            RM58.8
+                        RM <?php echo $gst = $totalprofit * 0.06; ?>
                         </td>
                     </tr>
                     <tr>
@@ -107,7 +92,7 @@
                             Nett Profit:
                         </th>
                         <td>
-                            <b>RM823.2</b>
+                            <b>RM <?php echo number_format($totalprofit - $servicefee - $gst,2); ?></b>
                         </td>
                     </tr>
                 </table>
