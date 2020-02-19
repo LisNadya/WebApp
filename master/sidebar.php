@@ -36,7 +36,7 @@ else if($USERTYPE==1){
     $colPic = 'vendorPicFile';
     $table = 'vendor';
     $navigation = array(
-        'vendor-dashboard.php' => array("<a href = 'vendor-dashoard.php'", ">Dashboard </a> <br/>"),
+        'vendor-dashboard.php' => array("<a href = 'vendor-dashboard.php'", ">Dashboard </a> <br/>"),
         'vendor-profile.php' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
         'vendor-report.php' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>")
     );
@@ -70,6 +70,7 @@ while($row = $getUser->fetch_assoc()){
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
 ?>
 
+<?php if($USERTYPE == 0 || $USERTYPE == 2){?>
 <!DOCTYPE html>
 <html lang="en">
 <head lang="en">
