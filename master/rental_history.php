@@ -2,7 +2,7 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$current = $_SESSION['cusID'];
+$current = $_SESSION['userID'];
 $sql = "SELECT * FROM booking";
 $getNumber = $conn->query($sql) or die("Error in $sql");
 
