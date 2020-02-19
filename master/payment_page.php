@@ -15,7 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $bookingID = "(SELECT bookingID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)";
     
     $valid = true;
-    $query = true;
+    $query_one = true;
+    $query_two = true;
     $fullname = $_POST['fullname'];
     $contact = $_POST['contact'];
     $address = $_POST['address'];
@@ -38,11 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if($valid){
         $conn = $DB->connect();
         $sql = "INSERT INTO payment (paymentAmt, paymentDate, bookingID) VALUES ($paymentAmt, $paymentDate, $bookingID)";
-        $query = $conn->query($sql);
+        $query_one = $conn->query($sql);
+        $sql = "UPDATE booking SET bookStatus=1 
+            WHERE bookingID=(SELECT bookingID FROM booking WHERE cusID='$current' ORDER BY bookingID DESC LIMIT 1)";
+        $query_two = $conn->query($sql);
         $location = "payment_complete.php?fn=$fullname&c=$contact&a=$address&po=$paymentOption";
             
         $conn->close();
-        if ($query){
+        if ($query_one && $query_two){
             header("Location: $location");
         } else {
             $formErr = "Payment was not successful";
