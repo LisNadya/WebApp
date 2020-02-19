@@ -27,7 +27,7 @@ while($row = $result->fetch_assoc()){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/VendorProfile.css">
+    <link rel="stylesheet" href="css/vendorProfile.css">
     <title>Vendor Profile</title>
 </head>
 
@@ -56,7 +56,7 @@ while($row = $result->fetch_assoc()){
                         </tr>
                         <tr>
                             <th>NRIC/Passport: </th>
-                            <td><?php echo $profile[0]["vendorNRIC"];?></td>
+                            <td><?php echo substr($profile[0]["vendorNRIC"],0,6)."-".substr($profile[0]["vendorNRIC"],6,2)."-".substr($profile[0]["vendorNRIC"],8);?></td>
                         </tr>
                     </table>
                 </div>

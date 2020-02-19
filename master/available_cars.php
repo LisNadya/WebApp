@@ -2,7 +2,7 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$sql = "select * from car";
+$sql = "select * from car where booked = 0";
 $getCar = $conn->query($sql) or die("Error in $sql");;
 $conn->close();
 
