@@ -16,7 +16,11 @@ $pageHeader = array(
     'cartype'           => "Manage Types of Vehicles",
     'user'              => "Manage Users",
     'servicePrice'      => "Manage Service Price",
-    'promotion'         => "Manage Promotions"
+    'promotion'         => "Manage Promotions",
+    'vendor-dashboard'  => "Vendor Dashboard",
+    'vendor-profile'    => "Vendor Profile",
+    'vendor-report'     => "Vendor Report",
+    'vendor-addCar'     => "Add Car"
 );
 
 if($USERTYPE==0){
@@ -36,9 +40,10 @@ else if($USERTYPE==1){
     $colPic = 'vendorPicFile';
     $table = 'vendor';
     $navigation = array(
-        'vendor-dashboard.php' => array("<a href = 'vendor-dashboard.php'", ">Dashboard </a> <br/>"),
-        'vendor-profile.php' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
-        'vendor-report.php' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>")
+        'vendor-dashboard' => array("<a href = 'vendor-dashboard.php'", ">Dashboard </a> <br/>"),
+        'vendor-profile' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
+        'vendor-report' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>"),
+        'vendor-addCar' => array("<a href = 'vendor-addCar.php'", ">Add Car</a> <br/>")
     );
 }
 else if($USERTYPE==2){
@@ -82,7 +87,10 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
    <link rel="stylesheet" href="css/sidebar.css" />
    <!--    Icons   -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+    
+   <title>
+        <?php echo $pgName;?>
+    </title>
 </head>
 <body>
     <aside id="leftBar">
