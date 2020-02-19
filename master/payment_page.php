@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $paymentID = $paymentAmt = $paymentDate = $bookingID = $location = "";
 
-    $current = $_SESSION['cusID'];
+    $current = $_SESSION['userID'];
     $paymentAmt = 
     "(((SELECT carPrice FROM car WHERE carID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
     * (SELECT bookingDuration FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 

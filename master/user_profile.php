@@ -2,7 +2,7 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$current = $_SESSION['cusID'];
+$current = $_SESSION['userID'];
 $getUser = $conn->query("SELECT * FROM customer WHERE cusID = '$current'");
 $conn->close();
 
