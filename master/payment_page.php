@@ -6,10 +6,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $paymentID = $paymentAmt = $paymentDate = $bookingID = $location = "";
 
     $current = $_SESSION['cusID'];
-    $paymentAmt = "((SELECT carPrice FROM car WHERE carID = '1') + 
-        ((SELECT carPrice FROM car WHERE carID = '1') * (SELECT priceAmt FROM price WHERE priceID = '1')))"; //To be refined
+    $paymentAmt = 
+    "(((SELECT carPrice FROM car WHERE carID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    * (SELECT bookingDuration FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    + ((SELECT carPrice FROM car WHERE carID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    * (SELECT priceAmt FROM price WHERE priceID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1))))";
     $paymentDate = "NOW()";
-    $bookingID = "(SELECT bookingID FROM booking WHERE carID = '1' AND cusID = '$current')"; //To be refined
+    $bookingID = "(SELECT bookingID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)";
     
     $valid = true;
     $query = true;
