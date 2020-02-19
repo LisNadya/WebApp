@@ -30,16 +30,15 @@
  input, select{
      display:block;
      margin-bottom:1em;
-     width:90%;
+     width:100%;
      padding:2%;
      border:1px solid rgb(163, 163, 163);
      border-radius:1em;
  }
-
- select{
-    width:100%;
- }
  
+input{
+    width:96%;
+}
  button:focus, input:focus, select:focus{
      outline:none;
  }
@@ -167,16 +166,17 @@
      input, select{
          background:none;
          border:none;
-         width:90%;
+         width:100%;
          margin:0;
          padding:1rem 0;
          border-bottom:1px solid black;
          border-radius:0;
      }
- 
-     select{
-         width:100%;
-     }
+     
+     input{
+        width:96%;
+    }
+
      input::placeholder{
          color:black;
      }
