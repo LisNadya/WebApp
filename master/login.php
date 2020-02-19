@@ -135,8 +135,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
    <link rel='stylesheet' href='css/default.css' />
    <link rel='stylesheet' href='css/login.css' />
    <script src="js/login.js"></script>
-   <script>
-   </script>
+   <style>
+    select{
+        width:100%;
+    }
+    input,.error{
+        width:96%;
+    }
+   </style>
 </head>
 <body>
     <section id='leftSide'>
