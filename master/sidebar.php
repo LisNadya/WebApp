@@ -26,8 +26,8 @@ if($USERTYPE==0){
     $table = 'customer';
     $navigation = array(
         'available_cars' => array("<a href='available_cars.php'", ">View List of Cars</a>"),
-        'userProfile' => array("<a href='userProfile.php'",">User Profile</a>"),
-        'carRentHistory' => array("<a href='carRentHistory.php'", ">Rental History</a>")
+        'userProfile' => array("<a href='user_profile.php'",">User Profile</a>"),
+        'carRentHistory' => array("<a href='rental_history.php'", ">Rental History</a>")
     );
 }
 if($USERTYPE==1){
@@ -50,6 +50,8 @@ if($USERTYPE==2){
     );
 }
 
+$target_profile_dir = "img/profile/";
+
 $conn = $DB->connect();
 $sql = "select * from $table where $colID = '$USERID'";
 $getUser = $conn->query($sql);
@@ -58,6 +60,7 @@ $conn->close();
 while($row = $getUser->fetch_assoc()){
     $userName = $row[$colName];
     $userIcon = $row[$colPic];
+    $userIcon = $target_profile_dir.$userIcon;
 }
 
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
@@ -70,7 +73,7 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
    <meta charset="utf-8">
    <meta content="width=device-width, initial-scale=1" name="viewport" />
    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-   <title>List of Available Cars</title>
+    <!-- <title>List of Available Cars</title> -->
    <!--    Custom styles   -->
    <link rel="stylesheet" href="css/reset.css" />
    <link rel="stylesheet" href="css/default.css" />
