@@ -134,14 +134,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
    <link rel='stylesheet' href='css/reset.css' />
    <link rel='stylesheet' href='css/default.css' />
    <link rel='stylesheet' href='css/login.css' />
-   
+   <script src="js/login.js"></script>
+   <style>
+    select{
+        width:100%;
+    }
+    input,.error{
+        width:96%;
+    }
+   </style>
 </head>
 <body>
     <section id='leftSide'>
-        <form action='login.php' method='post'>
+        <form action='login.php' method='post' id="login">
             <fieldset id='loginForm'>
                 <h1>Login</h1>
-                <select name='usertype' required>
+                <select name='usertype' class="loginRequired">
                     <option value=''>User Type</option>
                     <option value='0'>Customer</option>
                     <option value='1'>Vendor</option>
@@ -152,15 +160,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                         echo "<div class='error'>⚠ $userErr_login</div>"; 
                     } 
                 ?>
-                <input type='text' name='username' placeholder='Username' required>
-                <input type='password' name='password' placeholder='Password' required>
+                <input type='text' name='username' placeholder='Username' class="loginRequired">
+            
+
+                <input type='password' name='password' placeholder='Password' class="loginRequired">
                 
-                <button type='submit' name='action' value='login'>Log In <span class='raquo'>&raquo;</span></button>
+                
+                <button type='submit' onclick="loginCheck()" name='action' value='login'>Log In <span class='raquo'>&raquo;</span></button>
             </fieldset>
         </form>
     </section>
     <section id='rightSide' style='overflow-y:auto;'>
-        <form action='login.php' method='post'>
+        <form action='login.php' method='post' id="registration">
             <fieldset id='registerForm' >
                 <p>Not a member yet?</p>
                 <h1>Create Account</h1>
@@ -170,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                         echo "<div class='error'>⚠ $formErr</div>";
                     } 
                 ?>
-                <select name='usertype' required>
+                <select name='usertype' class="registerRequired">
                     <option value=''>User Type</option>
                     <option value='0'>Customer</option>
                     <option value='1'>Vendor</option>
@@ -182,34 +193,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                         echo "<div class='error'  style='font-size:10pt; padding:2%;'>⚠ $userErr_reg</div>";
                     } 
                 ?>
-                <input type='text' name='username' title='Example: SamMendes95' placeholder='Username' required>
+                <input type='text' name='username' title='Example: SamMendes95' placeholder='Username' class="registerRequired">
                 <?php 
                     if(isset($nameErr) && !empty($nameErr)){ 
                         echo "<div class='error'>⚠ $nameErr</div>";
                     } 
                 ?>
-                <input type='text' name='fullName' title='If you are a vendor, place the full name of your manager' placeholder='Full Name' required>
+                <input type='text' name='fullName' title='If you are a vendor, place the full name of your manager' placeholder='Full Name' class="registerRequired">
                 <?php 
                     if(isset($emailErr) && !empty($emailErr)){ 
                         echo "<div class='error'>⚠ $emailErr</div>";
                     } 
                 ?>
-                <input type='email' name='email' title='Example: abc123@gmail.com' placeholder='Email Address' required>
+                <input type='email' name='email' title='Example: abc123@gmail.com' placeholder='Email Address' class="registerRequired">
                 <?php 
                     if(isset($contactErr) && !empty($contactErr)){ 
                         echo "<div class='error'>⚠ $contactErr</div>";
                     } 
                 ?>
-                <input type='tel' name='contact' title='Example: 01112345678' placeholder='Contact No.' required>
+                <input type='tel' name='contact' title='Example: 01112345678' placeholder='Contact No.' class="registerRequired">
                 <input type='password' name='password'  placeholder='Password' required>
                 <?php 
                     if(isset($passErr_reg) && !empty($passErr_reg)){ 
                         echo "<div class='error'>⚠ $passErr_reg</div>";
                     } 
                 ?>
-                <input type='password' name='confirmPassword' placeholder='Confirm Password' required>
+                <input type='password' name='confirmPassword' placeholder='Confirm Password' class="registerRequired">
                 
-                <button type='submit' name='action' value='register'>Create Account <span class='raquo'>&raquo;</span></button>
+                <button type='submit' onclick="registerCheck()" name='action' value='register'>Create Account <span class='raquo'>&raquo;</span></button>
             </fieldset>
         </form>
     </section>

@@ -54,7 +54,6 @@ else if($USERTYPE==2){
     );
 }
 
-$target_profile_dir = "img/profile/";
 
 $conn = $DB->connect();
 $sql = "select * from $table where $colID = '$USERID'";
@@ -64,7 +63,6 @@ $conn->close();
 while($row = $getUser->fetch_assoc()){
     $userName = $row[$colName];
     $userIcon = $row[$colPic];
-    $userIcon = $target_profile_dir.$userIcon;
 }
 
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
@@ -76,6 +74,7 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
    <meta charset="utf-8">
    <meta content="width=device-width, initial-scale=1" name="viewport" />
    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   <link rel="icon" href="img/logo.jpg">
     <!-- <title>List of Available Cars</title> -->
    <!--    Custom styles   -->
    <link rel="stylesheet" href="css/reset.css" />
@@ -123,5 +122,5 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
             ?>
             </h1>
         </hgroup> 
-    </body>
-    </html> 
+</body>
+</html> 
