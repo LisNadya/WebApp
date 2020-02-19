@@ -1,7 +1,6 @@
 <?php
-    include "db/conn.php";
     include "object/priceTable.php";
-    //include "sidebar.php"
+    include "sidebar.php";
 
     $price = new PriceTable($DB);
     $getPrice = $price->read();
@@ -39,24 +38,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="leftBar">
-        <div id="user">
-            <img src="img/default.jpg" alt="Profile Image">
-            <p>
-                Hi <br/>
-                <b >Kuang Tar</b>
-            </p>
-        </div>
-        <nav>
-            <a href="cartype.html" >Manage Types of Vehicles</a>
-            <a href="user.html" >Manage Users</a>
-            <a href="servicePrice.html" id="selected">Manage Service Price</a>
-            <a href="promotion.html">Manage Promotions</a>
-          </nav>
-        <div id="signOut">
-            <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
-        </div>
-    </div>
     
     <hgroup>
         <h1>Manage Service Price</h1>

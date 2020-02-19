@@ -35,6 +35,7 @@
 
 .leftAlign {
     float:left;
+    display: block;
 }
 
 .form-style {
