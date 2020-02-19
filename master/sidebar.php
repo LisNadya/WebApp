@@ -26,8 +26,8 @@ if($USERTYPE==0){
     $table = 'customer';
     $navigation = array(
         'available_cars' => array("<a href='available_cars.php'", ">View List of Cars</a>"),
-        'userProfile' => array("<a href='user_profile.php'",">User Profile</a>"),
-        'carRentHistory' => array("<a href='rental_history.php'", ">Rental History</a>")
+        'user_profile' => array("<a href='user_profile.php'",">User Profile</a>"),
+        'rental_history' => array("<a href='rental_history.php'", ">Rental History</a>")
     );
 }
 else if($USERTYPE==1){
@@ -96,13 +96,11 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
         <nav>
             <?php
                 foreach($navigation as $i => $page){
-                    $count = 0;
-                    foreach($page as $nav){
-                        echo $nav;
-                        if($count==0 && $i == $pgName){
-                           echo "id='selected'";
-                        }
+                    echo $page[0];
+                    if($i == $pgName){
+                        echo "id='selected'";
                     }
+                    echo $page[1];
                 }
                 ?>
             </nav>
