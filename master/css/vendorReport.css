@@ -93,7 +93,7 @@ nav {
 
 body {
     overflow-x: hidden;
-    background-color: #FFDB58;
+    background-color: #F7F4F4;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a {
@@ -109,6 +109,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
     border-radius: 25px;
     box-shadow: 3px 3px grey;
     padding: 0.5rem 2rem;
+    border: 0.1rem solid grey;
 }
 
 th {
