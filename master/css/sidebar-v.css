@@ -8,7 +8,7 @@
 }
 
 #sidebar {
-    background: whitesmoke;
+    background: #060517;
     height: 100%;
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@
 }
 
 #avatar {
-    background: gray;
+    background: #81aeab;
     float: left;
     padding: 1.5em 3em 1em 1.5em;
 }

@@ -87,7 +87,7 @@ nav {
 
 body {
     overflow-x: hidden;
-    background-color: #FFDB58;
+    background-color: #f8f4f3;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a {
@@ -96,10 +96,10 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 
 
 #profile-box {
-    background-color: whitesmoke;
-    margin-left: 1.5rem;
+    background-color: white;
+    margin-left: 2rem;
     margin-bottom: 1rem;
-    width: 90%;
+    width: 80%;
     border-radius: 25px;
     box-shadow: 3px 3px grey;
     padding: 0.5rem 2rem;
@@ -138,6 +138,14 @@ td {
     box-shadow: 2px 2px grey;
 }
 
+
+img{
+    display:block;
+    width:500px;
+    border-radius:20px;
+    border:1px solid black;
+
+}
 
 #driving-license {
     float: left;
