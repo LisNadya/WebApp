@@ -1,11 +1,6 @@
 <?php
-    include "db/conn.php";
-    // include 'ChromePhp.php';
+    include "sidebar.php";
     include_once "object/promotionTable.php";
-    // session_start(); 
-    // ChromePhp::log('Hello console!');
-    // ChromePhp::log($_SERVER);
-    // ChromePhp::warn('something went wrong!');
 
     $promotion = new PromotionTable($DB);
     $getPromotion = $promotion->read();
@@ -104,24 +99,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="leftBar">
-        <div id="user">
-            <img src="img/default.jpg" alt="Profile Image">
-            <p>
-                Hi <br/>
-                <b >Kuang Tar</b>
-            </p>
-        </div>
-        <nav>
-            <a href="cartype.html">Manage Types of Vehicles</a>
-            <a href="user.html">Manage Users</a>
-            <a href="servicePrice.html">Manage Service Price</a>
-            <a href="promotion.html"  id="selected">Manage Promotions</a>
-          </nav>
-        <div id="signOut">
-            <a href="login.html"><i class="fa fa-sign-out"></i> Sign Out</a>
-        </div>
-    </div>
     <hgroup>
         <h1>Manage Promotion</h1>
     </hgroup>
