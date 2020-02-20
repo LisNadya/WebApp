@@ -1,9 +1,9 @@
 <?php
     class Database{
-        private $servername = "localhost";
-        private $username = "root";
-        private $password = "";
-        private $database = "transportdb";
+        private $servername = "cybergo.cl3klxoe7ycy.us-east-2.rds.amazonaws.com";
+        private $username = "cybergo";
+        private $password = "aaa11111";
+        private $database = "cybergo";
         private $conn;
 
         function connect(){

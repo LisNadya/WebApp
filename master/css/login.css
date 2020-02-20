@@ -1,206 +1,212 @@
+h1, h2, h3, p, body, div {
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;  
+ }
+ 
  a{
-     color:black;
+    text-decoration:none;
  }
+ 
+ h1  {  
+    font-size: 1.8em; 
+    margin: 0.25em 0 0.25em 0;
+ }
+ h2  {   
+    font-size: 1.2em;    
+    margin: 0.5em 0 0.25em 0;
+ }
+ p, body {
+    font-size: 0.9em;
+ } 
+ p {
+    margin-bottom: 1em;
+ }  
  body {
-    color:black;
-    background-color: rgb(197, 97, 4); 
+    background-color: #e2c044; 
  }
  
- /*Login form settings*/
- #leftSide{
-     position:fixed;
-     top:0;
-     left:0;
-     width:60%;
-     height:100%;
-     background-image:linear-gradient(to bottom right, rgb(255, 230, 161), rgb(197, 97, 4));
+ 
+ /*BOBBY"S added code*/
+ 
+ /*title*/
+ #pageTitle{
+    padding-left: 10em;
+    padding-top: 10em;
+    color: white;
+    width: fit-content;
  }
  
- #loginForm{
-    margin:20% 30% 10% auto;
-     padding:5%;
-     width:50%;
-     background:white;
-     border:none;
-     border-radius:2em;
-     
-     box-shadow:1px 1px 5px rgb(77, 77, 77);
+ #pageTitle h1{
+    font-size: 70pt;
+    line-height: 1em;
+    font-weight: bold;
  }
  
- input, select{
-     display:block;
-     margin-bottom:1em;
-     width:90%;
-     padding:2%;
-     border:1px solid rgb(163, 163, 163);
-     border-radius:1em;
- }
-
- select{
-    width:100%;
+ #pageTitle h2{
+    font-size: 30pt;
+    line-height: 1em;
+    font-weight: lighter;
  }
  
- button:focus, input:focus, select:focus{
-     outline:none;
- }
  
- /*Register form settings*/
+ /*Search box*/
  #rightSide{
-     position:fixed;
-     top:0;
-     right:0;
-     width:50%;
-     height:100%;
-     background:white;
-     border-radius:2em 0 0 2em;
-     box-shadow:-1px -1px 5px rgb(77, 77, 77);
+    position: absolute;
+    top:7em;
+    right: 3em;
+    width: 25%;
+    height:fit-content;
  }
  
- #registerForm{
-     margin:5% 15%;
-     border:none;
+ #loginForm h1{
+    font-size: 20pt;
+    margin-bottom: 1.25em;
  }
  
- #registerForm p{
-     font-size:15pt;
-     margin-bottom:-10px;
+ #loginForm {
+    margin:25%, 25%;
+    padding:2em;
+    background:white;
+    border:none;
+    border-radius:2em;
+    height: fit-content;
+    box-shadow:1px 1px 5px rgb(77, 77, 77);
  }
  
- button[type="submit"]{
-     background:transparent;
-     border:none;
-     float:right;
-     cursor:pointer;
-     font-size:18pt;
-     transition-duration: 0.5s;
+ /* Reset Select */
+ select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    /*border: 0 !important;*/
+    background: white;
+    border-radius: 1em;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    background: white;
+    line-height: 4;
+    overflow: hidden;
+    border-radius: 1em;
+    width:100%;
+    margin-top: 1em;
+  }
+  select {
+    flex: 1;
+    padding: 5%;
+    color: black;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #f39c12;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: white;
+  }
+ 
+ 
+ input {
+    display:block;
+    margin-bottom:1em;
+    margin-top: 1em;
+    width:90%;
+    padding:5%;
+    border:1px solid rgb(163, 163, 163);
+    border-radius:1em;
+ }
+ 
+ *
+ input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+ 
+ #loginForm a{
+    background:transparent;
+    color:black;
+    border:none;
+    float:right;
+    cursor:pointer;
+    font-size:18pt;
+    transition-duration: 0.5s;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
  }
  
  .raquo{
-     border:2px solid black;
-     padding:0 10px 5px 10px;
-     font-size:20pt;
-     border-radius:100px;
-     transition-duration: 0.5s;
+    border:2px solid black;
+    padding:0 10px 5px 10px;
+    font-size:20pt;
+    border-radius:100px;
+    transition-duration: 0.5s;
  }
  
- button[type="submit"]:hover{
-     color:#8a721c;
+ #loginForm a:hover{
+    color:#8a721c;
  }
  
- button[type="submit"]:hover .raquo{
-     border-color:#8a721c;
-     color:#8a721c;
+ #loginForm a:hover .raquo{
+    border-color:#8a721c;
+    color:#8a721c;
  }
  
- @media screen and (min-width: 901px) and (max-width: 1400px) {
-     #loginForm{
-         margin:20% 30% 10% auto;
-     }
-     #registerForm{
-         margin:10% 5%;
-     }
+ #detailsBody{
+    position: relative;
+    display: grid;
+    top: 8rem;
+    margin-bottom: 15em;
+    height: 800px;
+    background: white;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
  }
  
- @media screen and (min-width: 451px) and (max-width: 900px) {
-     
-     #loginForm{
-         margin:50% 15%;
-     }
-     #registerForm{
-         margin:30% 5%;
-     }
-     button[type="submit"]{
-         font-size:80%;
-     }
-     .raquo{
-         border:2px solid black;
-         font-size:12pt;
-         padding:5px 10px;
-         border-radius:100px;
-     }
- 
-     #registerForm p{
-         font-size:80%;
-     }
-     h1{
-         font-size:100%;
-     }
+ #detailsBody p{
+    font-size: 15pt;
+    font-weight: lighter;
+    margin: 1em;
+    padding: 1em;
  }
  
- @media screen and (max-width: 450px) {
-     #leftSide{
-         position:absolute;
-         top:0;
-         left:0;
-         height:100%;
-         width:100%;
-         background-image:linear-gradient(to bottom right, rgb(255, 230, 161), rgb(197, 97, 4));
-         margin:0;
-     }
- 
-     #rightSide{
-         position:absolute;
-         top:50%;
-         left:0;
-         width:100%;
-         height:auto;
-         border-radius: 2em 2em 0 0;
-         background:white;
-         margin:0;
-     }
- 
-     #loginForm{
-         background:transparent;
-         box-shadow:none;
-         
-         padding:40px 20px;
-         width:100%;
-         margin:0;
-     }
- 
-     #registerForm{
-         width:100%;
-         padding:40px 20px;
-         margin:0;
-     }
- 
-     input, select{
-         background:none;
-         border:none;
-         width:90%;
-         margin:0;
-         padding:1rem 0;
-         border-bottom:1px solid black;
-         border-radius:0;
-     }
- 
-     select{
-         width:100%;
-     }
-     input::placeholder{
-         color:black;
-     }
- 
-     button[type="submit"]{
-         margin-right:2rem;
-         font-size:1.5rem;
-         margin-top:2rem;
-     }
- 
-     .raquo{
-         border:2px solid black;
-         font-size:3rem;
-         vertical-align:-10px;
-         padding:0px 15px 5px 15px;
-         border-radius:100px;
-     }
- 
-     #registerForm p{
-         top:50%;
-         font-size:80%;
-     }
-     h1{
-         font-size:200%;
-         margin-bottom:2rem;
-     }
+ .salesBox{
+    margin: 2em;
+    float: left;
+    height: 700px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
  }
+ 
+ 
+ #detailsBody h2{
+    font-size: 20pt;
+    margin: 1em;
+    padding: 2em;
+ }
+ 

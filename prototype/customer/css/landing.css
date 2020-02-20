@@ -64,7 +64,7 @@ body {
    margin-bottom: 1.25em;
 }
 
-#loginForm{
+#loginForm {
    margin:25%, 25%;
    padding:2em;
    background:white;
@@ -74,7 +74,59 @@ body {
    box-shadow:1px 1px 5px rgb(77, 77, 77);
 }
 
-input{
+/* Reset Select */
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   appearance: none;
+   outline: 0;
+   /*border: 0 !important;*/
+   background: white;
+   border-radius: 1em;
+ }
+ /* Remove IE arrow */
+ select::-ms-expand {
+   display: none;
+ }
+ /* Custom Select */
+ .select {
+   position: relative;
+   display: flex;
+   background: white;
+   line-height: 4;
+   overflow: hidden;
+   border-radius: 1em;
+   width:100%;
+   margin-top: 1em;
+ }
+ select {
+   flex: 1;
+   padding: 5%;
+   color: black;
+   cursor: pointer;
+ }
+ /* Arrow */
+ .select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: #f39c12;
+   cursor: pointer;
+   pointer-events: none;
+   -webkit-transition: .25s all ease;
+   -o-transition: .25s all ease;
+   transition: .25s all ease;
+ }
+ /* Transition */
+ .select:hover::after {
+   color: white;
+ }
+
+
+input {
    display:block;
    margin-bottom:1em;
    margin-top: 1em;
