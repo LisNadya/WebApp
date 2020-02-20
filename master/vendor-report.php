@@ -60,7 +60,7 @@
                             Service Tax:
                         </th>
                         <td>
-                            10%
+                            12%
                         </td>
                     </tr>
                     <tr>
@@ -68,7 +68,7 @@
                             Service Fee:
                         </th>
                         <td>
-                            RM <?php echo $servicefee = $totalprofit * 0.1; ?>
+                            RM <?php echo $servicefee = $totalprofit * 0.12; ?>
                         </td>
                     </tr>
                     <tr>

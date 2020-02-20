@@ -36,8 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         //check if username exists
         $conn = $DB->connect();
+
         $getUsername = $conn->query("select $userID from $table where $userID = '$username'");
-        $conn->close();
+        // $stmt = $conn->prepare("SELECT ? FROM ? WHERE ? = ?");
+        // $stmt->bind_param("ssss", $userID,$table,$userID,$username);
+        // $stmt->execute();
+        // $getUsername = $stmt->get_result();
+        // $stmt->close();
+        // $conn->close();
+
 
         if($getUsername->num_rows == 0){
             $userErr_login = "Username does not exist";

@@ -37,6 +37,7 @@ else if($USERTYPE==1){
     $table = 'vendor';
     $navigation = array(
         'vendor-dashboard.php' => array("<a href = 'vendor-dashboard.php'", ">Dashboard </a> <br/>"),
+        'vendor-addcar.php' => array("<a href = 'vendor-addcar.php'", ">Add Car </a> <br/>"),
         'vendor-profile.php' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
         'vendor-report.php' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>")
     );
