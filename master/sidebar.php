@@ -16,7 +16,11 @@ $pageHeader = array(
     'cartype'           => "Manage Types of Vehicles",
     'user'              => "Manage Users",
     'servicePrice'      => "Manage Service Price",
-    'promotion'         => "Manage Promotions"
+    'promotion'         => "Manage Promotions",
+    'vendor-dashboard'  => "Vendor Dashboard",
+    'vendor-profile'    => "Vendor Profile",
+    'vendor-report'     => "Vendor Report",
+    'vendor-addCar'     => "Add Car"
 );
 
 if($USERTYPE==0){
@@ -26,8 +30,8 @@ if($USERTYPE==0){
     $table = 'customer';
     $navigation = array(
         'available_cars' => array("<a href='available_cars.php'", ">View List of Cars</a>"),
-        'userProfile' => array("<a href='user_profile.php'",">User Profile</a>"),
-        'carRentHistory' => array("<a href='rental_history.php'", ">Rental History</a>")
+        'user_profile' => array("<a href='user_profile.php'",">User Profile</a>"),
+        'rental_history' => array("<a href='rental_history.php'", ">Rental History</a>")
     );
 }
 else if($USERTYPE==1){
@@ -83,7 +87,10 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
    <link rel="stylesheet" href="css/sidebar.css" />
    <!--    Icons   -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+    
+   <title>
+        <?php echo $pgName;?>
+    </title>
 </head>
 <body>
     <aside id="leftBar">
@@ -97,13 +104,11 @@ $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
         <nav>
             <?php
                 foreach($navigation as $i => $page){
-                    $count = 0;
-                    foreach($page as $nav){
-                        echo $nav;
-                        if($count==0 && $i == $pgName){
-                           echo "id='selected'";
-                        }
+                    echo $page[0];
+                    if($i == $pgName){
+                        echo "id='selected'";
                     }
+                    echo $page[1];
                 }
                 ?>
             </nav>

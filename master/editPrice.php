@@ -1,7 +1,6 @@
 <?php
-    include "db/conn.php";
     include "object/priceTable.php";
-    //include "sidebar.php"
+    include "sidebar.php";
 
     $price = new PriceTable($DB);
     $getPrice = $price->read();
@@ -18,53 +17,72 @@
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
         $array1 = array_merge($array1, array_map('trim', explode(",", $row['price'])));
-
     }
 
     if(isset($_GET["modifyPrice"])){
         if(empty($_GET["priceRate"])){
             $_SESSION["alertClass"] = 'failure';
             $_SESSION["alertText"] = 'Price Rate is empty, Please Try Again';
+            header("Location: editPrice.php");
         } else {
             $price1 = $_GET["priceRate"];
             $price->updatePrice($price1, 1);
             $_SESSION["alertClass"] = 'success';
             $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
+            header("Location: servicePrice.php");
         }
 
-        if(empty($_GET["serviceCharge"])){
-            $_SESSION["alertClass"] = 'failure';
-            $_SESSION["alertText"] = 'Service Charge is empty, Please Try Again';
-        } else {
-            $price2 = $_GET["serviceCharge"];
-            $price->updatePrice($price2, 2);
-            $_SESSION["alertClass"] = 'success';
-            $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
-        }
+        // if(empty($_GET["serviceCharge"])){
+        //     $_SESSION["alertClass"] = 'failure';
+        //     $_SESSION["alertText"] = 'Service Charge is empty, Please Try Again';
+        //     header("Location: editPrice.php");
+        // } else {
+        //     $price2 = $_GET["serviceCharge"];
+        //     $price->updatePrice($price2, 2);
+        //     $_SESSION["alertClass"] = 'success';
+        //     $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
+        //     header("Location: servicePrice.php");
+        // }
 
-        if(empty($_GET["deliveryCharge"])){
-            $_SESSION["alertClass"] = 'failure';
-            $_SESSION["alertText"] = 'Delivery Charge is empty, Please Try Again';
-        } else {
-            $price3 = $_GET["deliveryCharge"];
-            $price->updatePrice($price3, 3);
-            $_SESSION["alertClass"] = 'success';
-            $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
-        }
+        // if(empty($_GET["deliveryCharge"])){
+        //     $_SESSION["alertClass"] = 'failure';
+        //     $_SESSION["alertText"] = 'Delivery Charge is empty, Please Try Again';
+        //     header("Location: editPrice.php");
+        // } else {
+        //     $price3 = $_GET["deliveryCharge"];
+        //     $price->updatePrice($price3, 3);
+        //     $_SESSION["alertClass"] = 'success';
+        //     $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
+        //     header("Location: servicePrice.php");
+        // }
 
-        if(empty($_GET["extraTime"])){
-            $_SESSION["alertClass"] = 'failure';
-            $_SESSION["alertText"] = 'Extra Time is empty, Please Try Again';
-        } else {
-            $price4 = $_GET["extraTime"];
-            $price->updatePrice($price4, 4);
-            $_SESSION["alertClass"] = 'success';
-            $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
-        }
-
-        header("Location: servicePrice.php");
+        // if(empty($_GET["extraTime"])){
+        //     $_SESSION["alertClass"] = 'failure';
+        //     $_SESSION["alertText"] = 'Extra Time is empty, Please Try Again';
+        //     header("Location: editPrice.php");
+        // } else {
+        //     $price4 = $_GET["extraTime"];
+        //     $price->updatePrice($price4, 4);
+        //     $_SESSION["alertClass"] = 'success';
+        //     $_SESSION["alertText"] = 'New Rate Charge Successfully Updated';
+        //     header("Location: servicePrice.php");
+        // }
     }
     
+    if(isset($_SESSION["alertClass"])) {
+        $alertClass = $_SESSION["alertClass"];
+        unset($_SESSION["alertClass"]);
+    } else {
+        $alertClass = "";
+    }
+
+    if(isset($_SESSION["alertText"])){
+        $alertText = $_SESSION["alertText"];
+        unset($_SESSION["alertText"]);
+    }else {
+        $alertText = "";
+    }
+
     $conn->close();
 ?>
 
@@ -81,6 +99,7 @@
     <link rel="stylesheet" href="css/sidebar.css" />
    <link rel="stylesheet" href="css/dashboard.css" />
    <link rel="stylesheet" href="css/editServicePricePromotion.css" />
+   <link rel="stylesheet" href="css/alert.css" />
    <!--    Icons   -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>

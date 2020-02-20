@@ -5,14 +5,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $paymentID = $paymentAmt = $paymentDate = $bookingID = $location = "";
 
-    $current = $_SESSION['cusID'];
-    $paymentAmt = "((SELECT carPrice FROM car WHERE carID = '1') + 
-        ((SELECT carPrice FROM car WHERE carID = '1') * (SELECT priceAmt FROM price WHERE priceID = '1')))"; //To be refined
+    $current = $_SESSION['userID'];
+    $paymentAmt = 
+    "(((SELECT carPrice FROM car WHERE carID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    * (SELECT bookingDuration FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    + ((SELECT carPrice FROM car WHERE carID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)) 
+    * (SELECT priceAmt FROM price WHERE priceID = (SELECT carID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1))))";
     $paymentDate = "NOW()";
-    $bookingID = "(SELECT bookingID FROM booking WHERE carID = '1' AND cusID = '$current')"; //To be refined
+    $bookingID = "(SELECT bookingID FROM booking WHERE cusID = '$current' ORDER BY bookingID DESC LIMIT 1)";
     
     $valid = true;
-    $query = true;
+    $query_one = true;
+    $query_two = true;
     $fullname = $_POST['fullname'];
     $contact = $_POST['contact'];
     $address = $_POST['address'];
@@ -35,11 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if($valid){
         $conn = $DB->connect();
         $sql = "INSERT INTO payment (paymentAmt, paymentDate, bookingID) VALUES ($paymentAmt, $paymentDate, $bookingID)";
-        $query = $conn->query($sql);
+        $query_one = $conn->query($sql);
+        $sql = "UPDATE booking SET bookStatus=1 
+            WHERE bookingID=(SELECT bookingID FROM booking WHERE cusID='$current' ORDER BY bookingID DESC LIMIT 1)";
+        $query_two = $conn->query($sql);
         $location = "payment_complete.php?fn=$fullname&c=$contact&a=$address&po=$paymentOption";
             
         $conn->close();
-        if ($query){
+        if ($query_one && $query_two){
             header("Location: $location");
         } else {
             $formErr = "Payment was not successful";

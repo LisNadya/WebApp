@@ -1,6 +1,27 @@
- a{
-     color:black;
+h1, h2, h3, p, body, div {
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;  
  }
+ 
+ a{
+    text-decoration:none;
+ }
+ 
+ h1  {  
+    font-size: 1.8em; 
+    margin: 0.25em 0 0.25em 0;
+ }
+ h2  {   
+    font-size: 1.2em;    
+    margin: 0.5em 0 0.25em 0;
+ }
+ p, body {
+    font-size: 0.9em;
+ } 
+ p {
+    margin-bottom: 1em;
+ }  
  body {
     color:black;
     background-color: rgb(197, 97, 4); 
@@ -43,35 +64,131 @@ input{
      outline:none;
  }
  
- /*Register form settings*/
+ 
+ /*Search box*/
  #rightSide{
-     position:fixed;
-     top:0;
-     right:0;
-     width:50%;
-     height:100%;
-     background:white;
-     border-radius:2em 0 0 2em;
-     box-shadow:-1px -1px 5px rgb(77, 77, 77);
+    position: absolute;
+    top:7em;
+    right: 3em;
+    width: 25%;
+    height:fit-content;
  }
  
- #registerForm{
-     margin:5% 15%;
-     border:none;
+ #loginForm h1{
+    font-size: 20pt;
+    margin-bottom: 1.25em;
  }
  
- #registerForm p{
-     font-size:15pt;
-     margin-bottom:-10px;
+ #loginForm {
+    margin:25%, 25%;
+    padding:2em;
+    background:white;
+    border:none;
+    border-radius:2em;
+    height: fit-content;
+    box-shadow:1px 1px 5px rgb(77, 77, 77);
  }
  
- button[type="submit"]{
-     background:transparent;
-     border:none;
-     float:right;
-     cursor:pointer;
-     font-size:18pt;
-     transition-duration: 0.5s;
+ /* Reset Select */
+ select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    /*border: 0 !important;*/
+    background: white;
+    border-radius: 1em;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    background: white;
+    line-height: 4;
+    overflow: hidden;
+    border-radius: 1em;
+    width:100%;
+    margin-top: 1em;
+  }
+  select {
+    flex: 1;
+    padding: 5%;
+    color: black;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #f39c12;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: white;
+  }
+ 
+ 
+ input {
+    display:block;
+    margin-bottom:1em;
+    margin-top: 1em;
+    width:90%;
+    padding:5%;
+    border:1px solid rgb(163, 163, 163);
+    border-radius:1em;
+ }
+ 
+ *
+ input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+ 
+ #loginForm a{
+    background:transparent;
+    color:black;
+    border:none;
+    float:right;
+    cursor:pointer;
+    font-size:18pt;
+    transition-duration: 0.5s;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+ }
+ 
+ .raquo{
+    border:2px solid black;
+    padding:0 10px 5px 10px;
+    font-size:20pt;
+    border-radius:100px;
+    transition-duration: 0.5s;
+ }
+ 
+ #loginForm a:hover{
+    color:#8a721c;
+ }
+ 
+ #loginForm a:hover .raquo{
+    border-color:#8a721c;
+    color:#8a721c;
  }
  
  .raquo{
@@ -204,3 +321,4 @@ input{
          margin-bottom:2rem;
      }
  }
+ 

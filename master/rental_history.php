@@ -2,20 +2,25 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$current = $_SESSION['cusID'];
-$sql = "SELECT carModel, carPlateNo, paymentDate, bookingDate, bookingDuration FROM car 
+$current = $_SESSION['userID'];
+$sql = "SELECT * FROM booking";
+$getNumber = $conn->query($sql) or die("Error in $sql");
+
+$sql = "SELECT carModel, carPlateNo, paymentDate, bookingDate, bookingReturn 
+    FROM car 
     INNER JOIN (booking INNER JOIN payment ON payment.bookingID = booking.bookingID) ON car.carID = booking.carID
-    WHERE booking.cusID = '$current'
+    WHERE booking.cusID = '$current' AND booking.bookStatus = 1
     GROUP BY bookingDate";
 $getHistory = $conn->query($sql) or die("Error in $sql");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $starting_date = $_POST['rental_history'];
-    $sql = "SELECT carModel, carPlateNo, paymentDate, bookingDate, bookingDuration FROM car 
-    INNER JOIN (booking INNER JOIN payment ON payment.bookingID = booking.bookingID) ON car.carID = booking.carID
-    WHERE bookingDate > '$starting_date' AND booking.cusID = '$current'
-    GROUP BY bookingDate";
+    $sql = "SELECT carModel, carPlateNo, paymentDate, bookingDate, bookingReturn
+        FROM car 
+        INNER JOIN (booking INNER JOIN payment ON payment.bookingID = booking.bookingID) ON car.carID = booking.carID
+        WHERE bookingDate > '$starting_date' AND booking.cusID = '$current'
+        GROUP BY bookingDate";
     $getHistory = $conn->query($sql) or die("Error in $sql");
 }
 $conn->close();
@@ -83,7 +88,7 @@ $conn->close();
                             $carPlateNo = $row['carPlateNo'];
                             $paymentDate = $row['paymentDate'];
                             $bookingDate = $row['bookingDate'];
-                            $bookingDuration = $row['bookingDuration'];
+                            $bookingDuration = $row['bookingReturn'];
                             echo 
                             "<div class='table-row'>
                                 <div class='table-cell first-cell'>
@@ -106,6 +111,10 @@ $conn->close();
                                 </div>
                             </div>";
                             $number++;
+
+
+
+
                         }
                         ?>
                     </div>

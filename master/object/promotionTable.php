@@ -88,18 +88,18 @@
         public function changeStatus($eventId)
         {
             $currStat = $this->currStat($eventId);
-            ChromePhp::log($currStat->status);
+            //ChromePhp::log($currStat->status);
             if($currStat->status == 1){
                 $newStatus = 0;
                 $sql = "UPDATE `" . $this->table_name . "` SET status = '" . $newStatus . "' WHERE id = '" . $eventId . "'";
-                ChromePhp::log("IF");
+                //ChromePhp::log("IF");
             } else {
                 $newStatus = 1;
                 $sql = "UPDATE `" . $this->table_name . "` SET status = '" . $newStatus . "' WHERE id = '" . $eventId . "'";
-                ChromePhp::log("ELSE");
+                //ChromePhp::log("ELSE");
             }
 
-             die("Error in $sql");
+            $this->conn->query($sql) or die("Error in $sql");
         }
     }
 ?>

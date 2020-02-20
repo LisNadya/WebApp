@@ -138,6 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
    <link href='https://fonts.googleapis.com/css?family=Montserrat&display=swap' rel='stylesheet'>
    <title>Login</title>
    <!--    Custom styles   -->
+   <link rel="icon" href="img/logo.jpg">
    <link rel='stylesheet' href='css/reset.css' />
    <link rel='stylesheet' href='css/default.css' />
    <link rel='stylesheet' href='css/login.css' />

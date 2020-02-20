@@ -2,25 +2,22 @@
 include "sidebar.php";
 
 $conn = $DB->connect();
-$current = $_SESSION['cusID'];
+$current = $_SESSION['userID'];
 $getUser = $conn->query("SELECT * FROM customer WHERE cusID = '$current'");
 $conn->close();
-
-$target_NRIC_dir = "img/NRIC/";
-$target_licence_dir = "img/licence/";
 
 while($row = $getUser->fetch_assoc()){
     $cusID = $row['cusID'];
     $cusName = $row['cusName'];
     $cusEmail = $row['cusEmail'];
     $cusContact = $row['cusContact'];
-    $cusDrivingLicence = $row['cusDrivingLicence'];
+    $cusDrivingLicence = $row['cusDrivingLicense'];
     $cusNRIC = $row['cusNRIC'];
-    $cusLicencePicFile = $row['cusLicencePicFile'];
+    $cusLicencePicFile = $row['cusLicensePicFile'];
     $cusNRICPicFile = $row['cusNRICPicFile'];
 
-    $cusNRICPicFile = $target_NRIC_dir.$cusNRICPicFile;
-    $cusLicencePicFile = $target_licence_dir.$cusLicencePicFile;
+    $cusNRICPicFile = $cusNRICPicFile;
+    $cusLicencePicFile = $cusLicencePicFile;
 }
 
 ?>

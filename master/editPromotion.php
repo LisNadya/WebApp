@@ -1,6 +1,6 @@
 <?php
-    include "db/conn.php";
     include_once "object/promotionTable.php";
+    include "sidebar.php";
 
     // Get Database connection
     //$db = $DB->connect();
@@ -63,7 +63,7 @@
         </div>
         <div id="content">
             <div class="container form-style">
-                <a href="promotion.php"><button class="button button2 leftAlign">Back</button></a>
+                <a href="promotion.php"><button class="leftAlign button button2">Back</button></a>
                 <form method="POST" id="updatePromo" enctype="multipart/form-data">
                     <ul class="form-style-1">
                         <li>
