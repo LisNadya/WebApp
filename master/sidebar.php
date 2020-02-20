@@ -16,7 +16,11 @@ $pageHeader = array(
     'cartype'           => "Manage Types of Vehicles",
     'user'              => "Manage Users",
     'servicePrice'      => "Manage Service Price",
-    'promotion'         => "Manage Promotions"
+    'promotion'         => "Manage Promotions",
+    'vendor-dashboard'  => "Vendor Dashboard",
+    'vendor-profile'    => "Vendor Profile",
+    'vendor-report'     => "Vendor Report",
+    'vendor-addCar'     => "Add Car"
 );
 
 if($USERTYPE==0){
@@ -26,8 +30,8 @@ if($USERTYPE==0){
     $table = 'customer';
     $navigation = array(
         'available_cars' => array("<a href='available_cars.php'", ">View List of Cars</a>"),
-        'userProfile' => array("<a href='userProfile.php'",">User Profile</a>"),
-        'carRentHistory' => array("<a href='carRentHistory.php'", ">Rental History</a>")
+        'user_profile' => array("<a href='user_profile.php'",">User Profile</a>"),
+        'rental_history' => array("<a href='rental_history.php'", ">Rental History</a>")
     );
 }
 else if($USERTYPE==1){
@@ -36,9 +40,10 @@ else if($USERTYPE==1){
     $colPic = 'vendorPicFile';
     $table = 'vendor';
     $navigation = array(
-        'vendor-dashboard.php' => array("<a href = 'vendor-dashoard.php'", ">Dashboard </a> <br/>"),
-        'vendor-profile.php' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
-        'vendor-report.php' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>")
+        'vendor-dashboard' => array("<a href = 'vendor-dashboard.php'", ">Dashboard </a> <br/>"),
+        'vendor-profile' => array("<a href = 'vendor-profile.php'", ">Profile </a> <br/>"),
+        'vendor-report' => array("<a href = 'vendor-report.php'", ">Monthly Report </a> <br/>"),
+        'vendor-addCar' => array("<a href = 'vendor-addCar.php'", ">Add Car</a> <br/>")
     );
 }
 else if($USERTYPE==2){
@@ -54,6 +59,7 @@ else if($USERTYPE==2){
     );
 }
 
+
 $conn = $DB->connect();
 $sql = "select * from $table where $colID = '$USERID'";
 $getUser = $conn->query($sql);
@@ -67,45 +73,43 @@ while($row = $getUser->fetch_assoc()){
 $pgName = $PAGE->getPage($_SERVER['REQUEST_URI']);
 ?>
 
-<?php 
-if($USERTYPE == 0 || $USERTYPE == 2){ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1" name="viewport" />
+   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   <link rel="icon" href="img/logo.jpg">
+    <!-- <title>List of Available Cars</title> -->
+   <!--    Custom styles   -->
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/default.css" />
+   <link rel="stylesheet" href="css/sidebar.css" />
+   <!--    Icons   -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <!DOCTYPE html>
-    <html lang="en">
-    <head lang="en">
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>List of Available Cars</title>
-    <!--    Custom styles   -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <!--    Icons   -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    </head>
-    <body>
-        <aside id="leftBar">
-            <div id="user">
-                <img src="<?php echo $userIcon;?>" alt="User Icon">
-                <p>
-                    Hi <br/>
-                    <b><?php echo $userName?></b>
-                </p>
-            </div>
-            <nav>
-                <?php
-                    foreach($navigation as $i => $page){
-                        $count = 0;
-                        foreach($page as $nav){
-                            echo $nav;
-                            if($count==0 && $i == $pgName){
-                            echo "id='selected'";
-                            }
-                            $count++;
-                        }
+   <title>
+        <?php echo $pgName;?>
+    </title>
+</head>
+<body>
+    <aside id="leftBar">
+        <div id="user">
+            <img src="<?php echo $userIcon;?>" alt="User Icon">
+            <p>
+                Hi <br/>
+                <b><?php echo $userName?></b>
+            </p>
+        </div>
+        <nav>
+            <?php
+                foreach($navigation as $i => $page){
+                    echo $page[0];
+                    if($i == $pgName){
+                        echo "id='selected'";
                     }
+                    echo $page[1];
+                }
                 ?>
             </nav>
             <div id="signOut">
@@ -124,53 +128,5 @@ if($USERTYPE == 0 || $USERTYPE == 2){ ?>
             ?>
             </h1>
         </hgroup> 
-    </body>
-    </html> 
-
-<?php } else if($USERTYPE == 1){?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css\sidebar-v.css">
-    <title>
-        Vendor Dashboard
-    </title>
-    </head>
-
-    <body>
-        <aside id="sidebar">
-            <div id="avatar">
-                <img src="img/default.jpg" alt="avatardp">
-                <span>
-                    Hi, <br />
-                    <b id="avatarname">Lis Nadya binti Zaidi</b>
-                </span>
-            </div>
-            <!--End of avatar-->
-            <nav id="sidebarnav">
-                <?php
-                    foreach($navigation as $i => $page){
-                        $count = 0;
-                        foreach($page as $nav){
-                            echo $nav;
-                            if($count==0 && $i == $pgName){
-                            echo "id='selected'";
-                            }
-                            $count++;
-                        }
-                    }
-                ?>
-            </nav>
-            <nav id="nav-logout">
-                <a href="login.php" class="sidelink">
-                    <img src="img/logout-512.png" id="logoutpic" alt="Log out from profile">
-                    <div id="logout">Sign Out</div>
-                </a>
-
-            </nav>
-        </aside>
-    </body>
-    </html>
-<?php } ?>
+</body>
+</html> 

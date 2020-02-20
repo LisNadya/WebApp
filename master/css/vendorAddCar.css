@@ -1,0 +1,106 @@
+
+form{
+    position:absolute;
+    margin-top:5em;
+    margin-left:17rem;
+    width:65%;
+    padding:3rem;
+    background:white;
+    border-radius:20px;
+    border-bottom:5px solid #060517;
+}
+
+.col2{
+    width:48%;
+    display:inline-block;
+}
+.last{
+    margin-left:2em;
+}
+
+input, select{
+    padding:0.5em 0;
+    margin-top:0.5em;
+    margin-bottom:1em;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #060517;
+    width:100%;
+}
+
+input::placeholder{
+    color:black;
+}
+
+input:focus, select:focus{
+    outline:none;
+}
+
+input[type="submit"], input[type="reset"]{
+    border:none;
+}
+
+input[type="submit"], input[type="reset"]{
+    width:49.5%;
+    display:inline-block;
+    background:#e94b2e;
+    color:black;
+    transition:0.5s;
+    border-radius:20px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover{
+    letter-spacing:5px;
+    color:white;
+    background:#060517;
+    cursor:pointer;
+}
+label, input, select{
+    display:block
+}
+
+.msg{
+    padding:0.5em;
+    background:#fff;
+    border-radius:20px;
+    border:0.1em solid grey;
+    margin-bottom:0.5em;
+    text-align:center;
+    color:grey;
+}
+
+.err{
+    background:pink;
+    border:0.5px solid red;
+    color:red;
+    margin-bottom:1em;
+    padding:0.5em 0;
+    text-align:center;
+    border-radius:0;
+    width:100%;
+}
+
+    
+@media screen and (min-width: 451px) and (max-width: 900px) {
+    form{
+        width:50%;
+        margin-left:12rem;
+    }
+
+    input[type="submit"], input[type="reset"]{
+        width:100%;
+    }
+}
+@media screen and (max-width: 450px) {
+    form{
+        position:absolute;
+        width:80%;
+        top: 13rem;
+        margin:auto;
+        z-index:-9;
+    }
+    
+    input[type="submit"], input[type="reset"]{
+        width:100%;
+    }
+}
